@@ -1,0 +1,45 @@
+.instagram-page-wrapper{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding:30px;
+  height:100%;
+}
+
+.instagram-content{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.instagram-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  color: #471E67;
+}
+
+.insta-image{
+  height:240px;
+  margin:16px;
+}
+
+.instagram-images{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 320px) and (max-width: 481px) {
+
+  .insta-image{
+    height:100px;
+    margin:16px;
+  }
+
+
+
+}

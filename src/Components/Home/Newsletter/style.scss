@@ -1,0 +1,55 @@
+
+@import "src/variables.scss";
+
+.newsletter-page-wrapper{
+  background-color: #F0EFEF;
+  height:100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding:30px;
+}
+
+.newsletter-content{
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-text{
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #471E67;
+}
+
+.newsletter-input{
+  background: #FFFFFF;
+  border: 1px solid #471E67;
+  box-sizing: border-box;
+  border-radius: 50px 0 0 50px;
+  height:48px;
+  width:80%;
+  text-indent: 16px;
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+
+.newsletter-button{
+  background: #471E67;
+  border-radius: 0px 50px 50px 0px;
+  border: none;
+  height:48px;
+  width:10%;
+}
+
+form{
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,47 @@
+.header-wrapper{
+  background-image: url("../../../Assets/Header/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:90vh!important;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left:50px;
+}
+.header-texto{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #404040;
+  text-shadow: -4px 3px 20px #D9D7F4;
+}
+
+.header-titulo{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 5.25rem;
+  color: #471E67;
+  text-shadow: -4px 3px 20px #D9D7F4;
+}
+
+
+@media (min-width: 320px) and (max-width: 1200px) {
+
+.header-container-title{
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .header-wrapper{
+padding:0;
+  }
+
+}
