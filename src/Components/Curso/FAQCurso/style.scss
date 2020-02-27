@@ -44,3 +44,17 @@
 .Mui-expanded{
   border: none!important;
 }
+
+@media all and (max-width: 480px) {
+
+  .faq-expansion-header{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .faq-expansion-text{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+}

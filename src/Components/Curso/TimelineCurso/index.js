@@ -10,7 +10,15 @@ export default class TimelineCurso extends Component{
     render(){
 
         return(
-            <Grid container className="timeline-curso-wrapper" sm={12} lg={12} md={12}>
+            <Grid container className="timeline-curso-wrapper" xs={12}  md={12}>
+
+                <Grid item className="timeline-curso-header" xs={12} md={12}>
+
+                <span className="timeline-page-title"> O que você vai aprender?</span>
+                <span className="timeline-page-subtitle"> As videoaulas do curso online estão divididas em 4 partes, sendo elas:</span>
+                </Grid>
+
+                <Grid item className="timeline-content-wrapper" xs={12} md={12}>
 
                 <ul className="timeline">
                     <li>
@@ -63,6 +71,7 @@ export default class TimelineCurso extends Component{
                     </li>
 
                 </ul>
+                </Grid>
 
             </Grid>
         );

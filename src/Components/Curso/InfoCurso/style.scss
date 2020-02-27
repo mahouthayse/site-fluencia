@@ -1,10 +1,9 @@
 .info-curso-wrapper{
   background-color:#F0EFEF;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 150px;
   padding:50px;
 }
 
@@ -26,6 +25,18 @@
   right:7%;
 }
 
+.info-content-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 135%;
+  text-align: center;
+  color: #CA4B49;
+  width:40%;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
 
 
 
@@ -50,15 +61,6 @@
   height:38vh;
 }
 
-
-.cls-2{
-  fill:#fff;
-}
-
-.cls-1{
-  fill:#404040;
-}
-
 .info-card{
   height: 90vh;
   background-color: #fff;
@@ -66,7 +68,7 @@
   flex-flow: column wrap;
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  margin-bottom:50px;
+  margin-bottom:50px!important;
 }
 
 .info-card-title{
@@ -89,3 +91,58 @@
   padding:16px 27px 0 27px;
 }
 
+.ribbon3 {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 75%;
+  height: 60px;
+  padding-left: 15px;
+  position: relative;
+  left: -8px;
+  top: 70%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.ribbon3:before, .ribbon3:after {
+  content: "";
+  position: relative;
+}
+
+.ribbon3:before {
+  height: 0;
+  width: 0;
+  top: -31%;
+  left: -15px;
+  border-bottom: 9px solid #404040;
+  border-left: 9px solid transparent;
+}
+
+.ribbon-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  color: #471E67;
+}
+
+.ribbon-subtitle{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  color: #404040;
+}
+
+@media all and (max-width: 480px) {
+
+  .info-content-title{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    width:100%;
+  }
+
+}

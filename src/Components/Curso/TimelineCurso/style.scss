@@ -1,10 +1,41 @@
 .timeline-curso-wrapper{
   background-color: #fff;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap!important;
   align-items: center;
   justify-content: center;
   padding:50px;
+}
+
+.timeline-content-wrapper{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.timeline-page-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #471E67;
+}
+
+.timeline-page-subtitle{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #404040;
+  margin-bottom: 50px;
+}
+
+.timeline-curso-header{
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .timeline {
@@ -15,7 +46,7 @@
   list-style-type: none;
   @media(max-width: 860px) {
     width: 100%;
-    padding: 4em 0 1em 0;
+    padding: 1em 0 1em 0;
   }
   &:before {
     position: absolute;
@@ -28,6 +59,12 @@
     margin-left: -3px;
     background: #EA7973;
     z-index: 5;
+
+    @media(max-width: 860px) {
+      left: -10%;
+      padding: 1em 0 1em 0;
+    }
+
   }
   li {
     padding: 1em 0;
@@ -51,9 +88,9 @@
   float: left;
   text-align: right;
   @media(max-width: 860px) {
-    float: none;
+    float:left;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
   .flag {
 
@@ -85,9 +122,9 @@
   width: 400px;
   float: right;
   @media(max-width: 860px) {
-    float: none;
+    float:left;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
   .flag {
     &:after {
@@ -112,6 +149,7 @@
     }
     &:before {
       left: -40px;
+
     }
   }
   .time-wrapper {
@@ -127,7 +165,7 @@
   display: inline-block;
   text-align: center;
   @media(max-width: 860px) {
-    text-align: center;
+    text-align: left;
   }
   .flag {
     font-family: Roboto;
@@ -175,4 +213,13 @@
   font-size: 1rem;
   line-height: 131%;
   color: #404040;
+}
+
+@media all and (max-width: 480px) {
+
+  .direction-l .flag:before, .direction-r .flag:before{
+    left: -10%;
+    margin-top: 30px;
+  }
+
 }

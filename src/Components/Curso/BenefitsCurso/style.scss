@@ -36,3 +36,29 @@
   line-height: 1.875rem;
   color: #404040;
 }
+
+.benefits-curso-icon{
+  margin-right: 16px;
+  font-size: 0.5rem;
+}
+
+
+@media all and (max-width: 480px) {
+  .benefits-curso-text{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .benefits-text-wrapper{
+    padding:32px;
+  }
+
+  .benefits-curso-title{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 32px;
+  }
+
+  .text-wrapper{
+    padding-left:0;
+  }
+}

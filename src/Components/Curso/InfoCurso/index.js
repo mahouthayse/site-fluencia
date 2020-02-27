@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import {Grid} from '@material-ui/core';
 import "./style.scss";
-import group98 from "../../../Assets/Curso/group98.svg";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -11,12 +12,23 @@ export default class InfoCurso extends Component{
 
         return(
             <Grid container className="info-curso-wrapper" sm={12} lg={12} md={12}>
+                <FontAwesomeIcon className="faq-icon-primary" icon={faChevronDown} size="2x" color="#471E67"/>
+
+                <span className="info-content-title">O primeiro e mais completo curso de percepção de fertilidade do Brasil</span>
+
+
 
                 <Grid container className="info-curso-content" sm={12} lg={9} md={12}>
 
                     <Grid item className="info-card" xs={12} md={3}>
 
                         <div className="card-image-1">
+
+                            <div className="ribbon3">
+                                <span className="ribbon-title">Informações gerais</span>
+                                <span className="ribbon-subtitle">Objetivo e metodologia</span>
+                            </div>
+
                         </div>
 
 
@@ -32,7 +44,10 @@ export default class InfoCurso extends Component{
                     <Grid item className="info-card" xs={12} md={3}>
 
                         <div className="card-image-2">
-
+                            <div className="ribbon3">
+                                <span className="ribbon-title">Para quem é o curso?</span>
+                                <span className="ribbon-subtitle">Público e pré-requisito</span>
+                            </div>
                         </div>
 
                         <span className="info-card-title"> Público-alvo</span>
@@ -46,7 +61,10 @@ export default class InfoCurso extends Component{
 
                     <Grid item className="info-card" xs={12} md={3}>
                         <div className="card-image-3">
-
+                            <div className="ribbon3">
+                                <span className="ribbon-title">Carol Fischmann</span>
+                                <span className="ribbon-subtitle">Sobre a instrutora</span>
+                            </div>
                         </div>
 
                         <span className="info-card-text"> <b>Carol Fischmann</b> é antropóloga e tem formação como Instrutora
