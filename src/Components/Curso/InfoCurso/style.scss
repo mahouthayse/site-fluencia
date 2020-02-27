@@ -4,7 +4,8 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 150px;
+  padding:50px;
 }
 
 .info-curso-content{
@@ -13,6 +14,18 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.image-card-wrapper{
+  background-image: url("../../../Assets/Curso/group98.svg");
+  position: relative;
+  background-repeat: no-repeat;
+  top:70%;
+  display: flex;
+  flex-flow: column wrap;
+  z-index:4;
+  right:7%;
+}
+
 
 
 
@@ -47,8 +60,7 @@
 }
 
 .info-card{
-  width: 27%;
-  height: 80vh;
+  height: 90vh;
   background-color: #fff;
   display: flex;
   flex-flow: column wrap;
@@ -77,9 +89,3 @@
   padding:16px 27px 0 27px;
 }
 
-.curso-info-image{
-  width: 301px;
-  height: 300px;
-  border-radius: 5px 5px 0px 0px;
-
-}

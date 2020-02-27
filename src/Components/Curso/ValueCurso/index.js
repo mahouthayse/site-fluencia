@@ -15,7 +15,7 @@ export default class ValueCurso extends Component{
             <Grid container className="value-curso-wrapper" xs={12} lg={12} md={12}>
 
 
-                <Grid container className="value-curso-card" xs={12} md={6}>
+                <Grid container className="value-curso-card" xs={12} md={5}>
 
                     <img className="value-card-image" src={Group43}/>
 

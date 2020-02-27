@@ -21,7 +21,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 35.5%!important;
+  height:100%;
 }
 
 .value-card-link{
@@ -103,4 +103,46 @@
   text-align: center;
   color: #EA7973;
   text-transform: uppercase;
+}
+
+@media all and (max-width: 480px) {
+
+  .value-curso-wrapper{
+    padding:50px 30px 50px 30px;
+  }
+
+  .value-card-link{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width:60%;
+  }
+
+  .value-card-title{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .value-card-price{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .value-card-secondary-text{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .value-card-text{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .value-curso-card-header{
+    height:30vh;
+  }
+
+  .value-curso-card-body{
+    height:70vh;
+  }
 }

@@ -1,16 +1,22 @@
 .benefits-curso-wrapper{
   background-color: #FFF8F9;
+  display:flex;
+  flex-flow: row wrap;
 }
 
 .benefits-text-wrapper{
   display:flex;
-  flex-flow: column;
+  flex-flow: column wrap;
   align-items: flex-start;
   justify-content: center;
 }
 
 .text-wrapper{
   padding-left:60px;
+}
+
+.curso-benefits-image{
+  width:100%;
 }
 
 .benefits-curso-title{
@@ -29,8 +35,4 @@
   font-size: 1.25rem;
   line-height: 1.875rem;
   color: #404040;
-}
-
-li{
-  margin-bottom: 16px;
 }

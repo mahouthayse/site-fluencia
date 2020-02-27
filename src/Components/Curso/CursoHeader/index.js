@@ -13,12 +13,12 @@ export default class CursoHeader extends Component{
 
                 <Grid container className="curso-header-content" sm={12} lg={12} md={12}>
 
-                    <Grid item className="curso-header-text" sm={12} md={7} lg={6}>
+                    <Grid item className="curso-header-text" sm={12} md={6} lg={6}>
                         <h1 className="curso-header-title"> Curso online </h1>
                         <h2 className="curso-header-subtitle">Aprenda o método de percepção de fertilidade no seu próprio ritmo </h2>
                     </Grid>
 
-                    <Grid item className="curso-header-image" sm={12} md={5} lg={6}>
+                    <Grid item className="curso-header-image" sm={12} md={6} lg={6}>
                         <img className="curso-header-img" src={HeaderCurso}/>
                     </Grid>
 

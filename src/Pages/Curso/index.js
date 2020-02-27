@@ -11,6 +11,7 @@ import CursoHeader from "../../Components/Curso/CursoHeader";
 import ValueCurso from "../../Components/Curso/ValueCurso";
 import FeaturesCurso from "../../Components/Curso/FeaturesCurso";
 import TimelineCurso from "../../Components/Curso/TimelineCurso";
+import FAQCurso from "../../Components/Curso/FAQCurso";
 
 
 
@@ -32,6 +33,7 @@ export default class Curso extends Component{
                 <ValueCurso/>
                 <MetodologiaCurso/>
                 <ProgramsCurso/>
+                <FAQCurso/>
 
                 </Grid>
 
