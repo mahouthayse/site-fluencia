@@ -26,7 +26,7 @@
     width: 4px;
     height: 100%;
     margin-left: -3px;
-    background: #EA7973;;
+    background: #EA7973;
     z-index: 5;
   }
   li {
@@ -131,15 +131,12 @@
   }
   .flag {
     font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
     font-size: 20px;
     line-height: 150%;
     /* or 150% */
     text-align: right;
     color: #EA7973;
     font-weight: 600;
-    text-align: left;
     @media(max-width: 860px) {
       z-index: 15;
     }
