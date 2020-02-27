@@ -14,9 +14,9 @@ export default class Newsletter extends Component{
         return(
             <Grid container className="newsletter-page-wrapper" sm={12} lg={12}>
 
-                <Grid container className="newsletter-content" xs={12} lg={9} md={9}>
+                <Grid container className="newsletter-content" xs={12} lg={7} md={9}>
 
-                    <Grid item className="newsletter-image" xs={12} lg={6} md={6}>
+                    <Grid item className="newsletter-image-content" xs={12} lg={6} md={6}>
                         <img className="newsletter-image" src={Mail}/>
                     </Grid>
 

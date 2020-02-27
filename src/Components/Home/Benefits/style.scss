@@ -1,10 +1,29 @@
 .benefits-page-wrapper{
-
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin-top:-280px;
+  margin-top: -150px;
+  padding:46px;
+}
+
+.benefits-title-card{
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-title-width{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #404040;
+  margin-bottom:1rem;
+  width:60%;
 }
 
 .benefits-page-color{
@@ -17,28 +36,20 @@
   padding:0 30px 0 30px;
 }
 
-.wave-container-benefits{
-  width:100%;
-}
-
-.wave-path-benefits{
-  fill:#fff;
-}
-
 .benefits-page-title{
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 1.75rem;
   line-height: 2.188rem;
-  text-align: center;
   color: #CA4B49;
+  text-align: center!important;
 }
 
 .benefits-content{
   display:flex;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin-top:30px;
 }
@@ -49,14 +60,12 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-}
-
-Divider{
-  padding:30px;
+  width:20%;
 }
 
 .benefits-image{
-  height:200px;
+  height:30%;
+  margin-bottom: 16px;
 }
 
 .benefits-title{
@@ -91,4 +100,53 @@ Divider{
   text-decoration: underline;
   text-transform: uppercase;
   color: #CA4B49;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .benefits-content{
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+  }
+
+  .benefits-page-color{
+    padding:10px;
+  }
+
+  .benefits-card{
+    display:flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    margin-bottom: 32px;
+  }
+
+  .benefits-page-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+  }
+
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+
+  .benefits-page-color{
+    margin-top:30px;
+  }
+
+
+  .benefits-card{
+    display:flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    margin-bottom: 32px;
+  }
+
 }

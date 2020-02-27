@@ -1,0 +1,42 @@
+.features-curso-wrapper{
+  background-color: #F0EFEF;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding:50px;
+}
+
+.features-curso-text{
+  display: flex;
+  flex-flow: column wrap;
+  padding-left:30px;
+}
+
+.features-curso-image{
+  width:90%;
+}
+
+.features-curso-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size:1.625rem;
+  line-height: 154%;
+  color: #471E67;
+  margin-bottom: 32px;
+}
+
+
+.features-curso-primary-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 130%;
+  color: #000000;
+}
+
+.features-icon-primary{
+  margin-right:3%;
+}

@@ -3,6 +3,7 @@
   background-color: #fff;
   height: 60px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 135px 0 135px;
 }
 
 .menu-links-wrapper{
@@ -15,17 +16,10 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.menu-link:nth-child(4){
-  color: #fff;
-  background-color: #471E67;
-  padding:5px 20px 5px 20px;
-  border-radius:50px;
 }
 
 .menu-button-wrapper{
@@ -39,6 +33,6 @@
   color: #471E67!important;
   font-family: 'Roboto', sans-serif!important;
   font-weight: 600!important;
-  font-size: 1.125rem!important;
+  font-size: 1rem!important;
   text-decoration: underline!important;
 }

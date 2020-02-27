@@ -10,9 +10,9 @@ export default class Header extends Component{
         return(
             <Grid container className="header-wrapper" xs={12} lg={12}>
 
-                <Grid item container className="header-container-title" direction="column" justify="flex-start" alignItems="center" xs={12} lg={5}>
+                <Grid item container className="header-container-title" xs={12} sm={9} md={8} lg={6}>
                     <h1 className="header-titulo"> Fluência corporal</h1>
-                    <span className="header-texto">Aprenda tudo sobre percepção menstrual com conteúdos gratuitos e cursos completos</span>
+                    <span className="header-texto">Entenda finalmente o que ninguém nunca te explicou sobre seu corpo e seus ciclos</span>
                 </Grid>
 
             </Grid>

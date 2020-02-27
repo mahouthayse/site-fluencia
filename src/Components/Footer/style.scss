@@ -1,11 +1,14 @@
 .footer-wrapper{
   background-color: #471E67;
   height:100%;
-  padding:30px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+}
+
+.footer-content{
+padding: 50px 40px 50px 40px;
 }
 
 
@@ -47,6 +50,10 @@
 }
 
 .footer-image{
-  height:50px;
-  margin:8px;
+  height:70px;
+  margin-right:16px;
+}
+
+.instagramIcon{
+  margin-bottom:16px;
 }

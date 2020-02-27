@@ -7,37 +7,40 @@
   height:100%;
 }
 
-.instagram-content{
-  display: flex;
-  flex-flow: column wrap;
-}
 
 .instagram-title{
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 1.625rem;
   color: #471E67;
+  margin-bottom:32px;
 }
 
 .insta-image{
-  height:240px;
-  margin:16px;
+  width:80%;
+  margin-right:16px;
 }
 
 .instagram-images{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
 }
 
 @media (min-width: 320px) and (max-width: 481px) {
 
+  .instagram-images{
+    display: flex;
+    flex-flow: row nowrap!important;
+    align-items: center;
+    justify-content: center;
+  }
+
   .insta-image{
-    height:100px;
-    margin:16px;
+    width:90%;
+    margin:8px;
   }
 
 

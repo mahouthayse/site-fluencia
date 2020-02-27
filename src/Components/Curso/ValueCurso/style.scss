@@ -1,0 +1,106 @@
+.value-curso-wrapper{
+  background-image: url("../../../Assets/Curso/pricesImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100%;
+  padding:160px 50px 160px 50px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-card-image{
+  margin-left: -101%;
+}
+.value-curso-card{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding:30px 70px 30px 70px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 35.5%!important;
+}
+
+.value-card-link{
+  background: #471E67;
+  border: 1.18164px solid #471E67;
+  box-sizing: border-box;
+  border-radius: 29.5409px;
+  padding:10px 10px 10px 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  width:40%;
+  align-self: center;
+  margin-top:32px;
+}
+
+.value-card-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #828282;
+  margin-bottom:16px;
+}
+
+.value-curso-card-header{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height:40vh;
+}
+
+.value-curso-card-body{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height:60vh;
+}
+
+.value-card-secondary-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #471E67;
+  margin-bottom:32px!important;
+}
+
+.MuiDivider-root{
+  margin-bottom:8px !important;
+}
+
+.value-card-price{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.5rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #471E67;
+}
+
+.value-card-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 1.6rem;
+  text-align: center;
+  color: #EA7973;
+  text-transform: uppercase;
+}

@@ -11,7 +11,7 @@ export default class Presentation extends Component{
             <Grid container className="presentation-page-wrapper" sm={12} lg={12}>
                 <div className="wave-container">
                     <svg className="wave-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path className="wave-path-presentation" d="M0,64L80,101.3C160,139,320,213,480,224C640,235,800,181,960,170.7C1120,160,1280,192,1360,208L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                        <path className="wave-path-presentation" d="M0,38V641.5c414.5,99,617-73.5,791.5-73.5,239,0,237,89.5,648,73.5v-582c-163,53-323.5,59.58-475,41C732,72,422-65.48,0,38Z">
 
                         </path>
                     </svg>
@@ -22,20 +22,31 @@ export default class Presentation extends Component{
 
                     <Grid container className="presentation-content" xs={12} lg={9} md={9}>
 
-                        <Grid item className="presentation-image-wrapper" xs={12} lg={4} md={4}>
+                        <Grid item className="presentation-image-wrapper" xs={12} lg={5} md={4}>
                             <img className="presentation-image" src={Carol}/>
                         </Grid>
 
-                        <Grid container className="presentation-text-wrapper" xs={12} lg={8} md={8}>
+                        <Grid container className="presentation-text-wrapper" xs={12} lg={7} md={8}>
                             <span className="presentation-title"> Olá menstruante!</span>
-                            <span className="presentation-text">Eu sou a Carol Fischmann, idealizadora do projeto Fluência
-                                Corporal. Sou instrutora de percepção de fertilidade do método Justisse e quero ajudar você
-                                a entender seu próprio corpo, redescobrir o seu ciclo menstrual e reconhecer seu período
-                                fértil com base em evidências científicas e conhecimentos tradicionais.</span>
+                            <span className="presentation-text">Aqui na Fluência Corporal, você finalmente vai entender
+                                seu próprio corpo! Quero te ajudar a entender a importância de ovular, como reconhecer
+                                seu período fértil com precisão e como se reconciliar com sua ciclicidade. Tudo baseado
+                                nas melhores evidências científicas e conhecimentos tradicionais.</span>
+                            <span className="presentation-text">Então pegue uma xícara de chá, um pedaço de bolo e chega
+                                junto que a conversa vai ser boa!</span>
                         </Grid>
 
                     </Grid>
                 </Grid>
+
+                <div className="wave-container-bottom">
+                    <svg className="wave-container-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path className="wave-path-presentation" d="M0,555v86.5c414.5,99,617-73.5,791.5-73.5,239,0,237,89.5,648,73.5V559Z" transform="translate(0 -555)">
+
+                        </path>
+                    </svg>
+                </div>
+
             </Grid>
         );
     }

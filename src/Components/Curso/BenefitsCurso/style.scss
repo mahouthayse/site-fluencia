@@ -1,0 +1,36 @@
+.benefits-curso-wrapper{
+  background-color: #FFF8F9;
+}
+
+.benefits-text-wrapper{
+  display:flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.text-wrapper{
+  padding-left:60px;
+}
+
+.benefits-curso-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 2.188rem;
+  color: #471E67;
+}
+
+.benefits-curso-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #404040;
+}
+
+li{
+  margin-bottom: 16px;
+}

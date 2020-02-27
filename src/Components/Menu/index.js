@@ -39,15 +39,16 @@ export default function SimpleMenu() {
             <Hidden only={['sm', 'xs']}>
 
             <Grid container className="menu-wrapper" sm={12} lg={12} md={12}>
-                <Grid item className="menu-links-wrapper" sm={12} lg={9} xl={9} md={9}>
+                <Grid item className="menu-links-wrapper" sm={12} lg={7} md={9}>
                     <Link to="/" className="menu-link" >Home</Link>
                     <Link to="/" className="menu-link" >Sobre</Link>
                     <Link to="/" className="menu-link" >Blog</Link>
-                    <Link to="/" className="menu-link" >Cursos</Link>
+                    <Link to="/curso" className="menu-link" >Cursos</Link>
+                    <Link to="/" className="menu-link" >Atendimento</Link>
                     <Link to="/" className="menu-link" >Contato</Link>
                 </Grid>
 
-                <Grid item className="menu-button-wrapper" sm={12} lg={3} md={3} xl={3}>
+                <Grid item className="menu-button-wrapper" sm={12} lg={5} md={3}>
                     <Button className="menu-button"> Área da aluna</Button>
                 </Grid>
             </Grid>

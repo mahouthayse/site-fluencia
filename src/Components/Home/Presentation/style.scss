@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height:100%;
-  margin-top: -250px;
+  margin-top: -110px;
 }
 
 .presentation-page-color{
@@ -13,12 +13,18 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  margin-top:-20px;
   height:100%;
+  margin-top: -180px;
 }
 
 .wave-path-presentation{
-  fill: #FFF8F9;;
+  fill: #FFF8F9;
+}
+
+.wave-container-bottom{
+  height:100%;
+  width:100%;
+  margin-top: -5px;
 }
 
 .presentation-content{
@@ -27,7 +33,7 @@
   align-items: center;
   justify-content: center;
   margin-top:50px;
-  margin-bottom:280px;
+  margin-bottom:40px;
 }
 
 
@@ -51,7 +57,7 @@
 }
 
 .presentation-image{
-  width:80%;
+  width:75%;
 }
 
 @media (min-width: 1300px) {
@@ -62,19 +68,82 @@
     justify-content: center;
     align-items: center;
     height:100%;
-    margin-top: -300px;
+    margin-top: -110px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
 
   .presentation-page-wrapper{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    margin-top: -80px;
+    margin-top: -50px;
   }
 
+  .presentation-text{
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .presentation-image{
+    width:70%;
+  }
+
+  .presentation-page-color{
+    margin-top: -20px;
+  }
+
+  .presentation-text-wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding:32px;
+  }
+
+  .presentation-image-wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+
+  .presentation-page-wrapper{
+    margin-top: -100px;
+  }
+
+  .presentation-page-color{
+    margin-top: -30px;
+  }
+
+  .presentation-image{
+    width:55%;
+  }
+
+  .presentation-image-wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .presentation-text-wrapper{
+    align-items: center;
+    justify-content: center;
+    padding:32px;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1441px) {
+
+  .presentation-page-wrapper{
+    margin-top: -150px;
+  }
 }

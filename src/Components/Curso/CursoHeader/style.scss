@@ -1,0 +1,32 @@
+.curso-header-wrapper{
+  background-image: url("../../../Assets/Curso/headerTriangle.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height:100vh!important;
+  padding-left:100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.curso-header-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 5.25rem;
+
+  color: #FFFFFF;
+}
+
+.curso-header-subtitle{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 2.188rem;
+  color: #FFFFFF;
+  width:60%;
+}
