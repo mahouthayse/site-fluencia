@@ -1,0 +1,43 @@
+.checkout-autorizado-wrapper{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-text-title{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #6BBE46;
+  margin-bottom:32px;
+}
+
+.success-text-primary{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #404040;
+  margin-bottom:20px;
+}
+
+.success-link{
+  background-color: #471E67;
+  border-radius: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding:12px 35px 12px 35px;
+  color: #FFFFFF;
+  text-decoration: none;
+}

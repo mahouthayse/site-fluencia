@@ -1,0 +1,52 @@
+.redefinir-senha-wrapper{
+  display:flex;
+  flex-flow: column wrap;
+  padding:30px;
+}
+
+.pass-row{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pass-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  text-align: center;
+  color: #471E67;
+}
+
+.pass-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #404040;
+  margin-bottom:32px;
+}
+
+.pass-link-primary{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: flex;
+  text-decoration-line: underline;
+  color: #471E67;
+}
+
+.pass-link-secondary{
+  background: #471E67;
+  border: 1.18164px solid #471E67;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding:12px 30px 12px 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
