@@ -1,0 +1,40 @@
+.atendimento-depoimentos{
+  background-color: #FFF8F9;
+  padding:50px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+
+.awssld__wrapper{
+  height:40vh!important;
+}
+.awssld__content{
+  background-color: #FFF8F9!important;
+}
+.awssld__container{
+  height:40vh!important;
+}
+
+.depoimentos-conteudo{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width:60%;
+}
+
+@media all and (max-width: 480px) {
+
+  .depoimentos-conteudo{
+    width:100%;
+  }
+
+  .texto-primario{
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+}

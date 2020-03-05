@@ -44,7 +44,7 @@ export default function SimpleMenu() {
                     <Link to="/" className="menu-link" >Sobre</Link>
                     <Link to="/" className="menu-link" >Blog</Link>
                     <Link to="/curso" className="menu-link" >Cursos</Link>
-                    <Link to="/" className="menu-link" >Atendimento</Link>
+                    <Link to="/atendimento-individual" className="menu-link" >Atendimento</Link>
                     <Link to="/" className="menu-link" >Contato</Link>
                 </Grid>
 
