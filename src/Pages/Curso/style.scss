@@ -5,6 +5,11 @@
   background-color: #F0EFEF;
 }
 
+.curso-content{
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .curso-header{
   height:100%;
 }

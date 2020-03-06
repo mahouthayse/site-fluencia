@@ -47,7 +47,7 @@ export default function SimpleMenu() {
 
                     <div>
                         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                            <Link to="/" className="menu-link" >Atendimentos</Link>
+                            <span className="menu-link">Atendimentos</span>
                         </Button>
                         <Menu
                             id="simple-menu"

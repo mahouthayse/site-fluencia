@@ -5,12 +5,18 @@
   background-color: #F0EFEF;
 }
 
+
+.atendimento-individual-conteudo{
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .atendimento-header-container{
   background-image: url("../../Assets/Curso/headerTriangle.svg");
-  background-size: cover;
+  background-size: cover!important;
   background-repeat: no-repeat;
   width: 100%;
-  min-height:100vh!important;
+  min-height:140vh!important;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
