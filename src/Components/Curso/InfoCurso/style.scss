@@ -139,6 +139,11 @@
 
 @media all and (max-width: 480px) {
 
+  .info-card{
+    height: 100vh;
+
+  }
+
   .info-content-title{
     font-size: 1.25rem;
     line-height: 1.5rem;

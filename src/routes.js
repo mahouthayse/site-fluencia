@@ -4,6 +4,7 @@ import React from "react";
 import Curso from "./Pages/Curso";
 import Checkout from "./Pages/Checkout";
 import AtendimentoIndividual from "./Pages/AtendimentoIndividual";
+import AtendimentoEmGrupo from "./Pages/AtendimentoEmGrupo";
 
 
 
@@ -14,6 +15,7 @@ const Routes = () => (
             <Route path="/curso" component={Curso} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/atendimento-individual" component={AtendimentoIndividual} />
+            <Route path="/atendimento-em-grupo" component={AtendimentoEmGrupo} />
 
         </Switch>
     </BrowserRouter>
