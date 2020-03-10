@@ -82,7 +82,7 @@
   line-height: 1.25rem;
   color: #404040;
   padding:16px 27px 0 27px;
-  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 1rem; padding:16px 20px 10px 20px;}
+  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 1rem; padding:10px 20px 5px 20px;}
 }
 
 .info-card-text{
@@ -92,7 +92,7 @@
   line-height: 1.25rem;
   color: #404040;
   padding:16px 27px 0 27px;
-  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 1rem; padding:16px 20px 10px 20px;}
+  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 1rem; line-height: 1.5rem; padding:10px 20px 5px 20px;}
 }
 
 .ribbon3 {
@@ -130,7 +130,7 @@
   font-size: 0.95rem;
   line-height: 1rem;
   color: #471E67;
-  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 0.875rem;  line-height: 1.2rem;}
+  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 1rem;  line-height: 1.2rem;}
 }
 
 .ribbon-subtitle{
@@ -139,5 +139,5 @@
   font-size: 0.95rem;
   line-height: 1rem;
   color: #404040;
-  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 0.875rem;  line-height: 1.2rem;}
+  @media all and (min-width: 1024px) and (max-width: 1280px) {  font-size: 1rem;  line-height: 1.2rem;}
 }
