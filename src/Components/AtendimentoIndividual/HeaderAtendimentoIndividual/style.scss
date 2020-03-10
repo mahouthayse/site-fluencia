@@ -1,0 +1,64 @@
+@import "../../../variables";
+
+
+.header-atendimento-individual{
+  background-image: url("../../../Assets/Curso/headerTriangle.svg");
+  background-size: cover!important;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height:130vh!important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  @media all and (max-width: 480px) {min-height:80vh!important;}
+  @media all and (min-width: 769px) and (max-width: 1024px) {min-height:80vh!important;}
+  @media all and (min-width: 1025px) and (max-width: 1280px) {min-height:130vh!important;}
+}
+
+.header-atendimento-conteudo{
+  margin-top: -140px;
+  @media all and (min-width: 1025px) and (max-width: 1280px) {margin-top: -180px;};
+  @media all and (min-width: 481px) and (max-width: 768px) {margin-top: 150px};
+  @media all and (max-width: 480px) {margin-top: 40px}
+
+}
+
+.header-atendimento-texto{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 50px;
+  @media all and (max-width: 480px) {align-items: center; padding:16px;};
+  @media all and (min-width: 1025px) and (max-width: 1280px) {padding-left: 100px;};
+}
+
+.header-titulo-primario{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4.5rem;
+  line-height: 5rem;
+  color: #{$white};
+  margin-bottom:3.125rem;
+  @media all and (min-width: 1025px) and (max-width: 1280px) {font-size: 3.75rem; line-height: 4.5rem;}
+  @media all and (max-width: 480px) {font-size: 1.85rem; margin-bottom:2rem;}
+  @media all and (min-width: 481px) and (max-width: 768px) {font-size: 3rem;}
+}
+
+.header-subtitulo-primario{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  color: #{$white};
+  @media all and (min-width: 1025px) and (max-width: 1280px) {font-size: 1.438rem;};
+  @media all and (max-width: 480px) { font-size: 1rem; line-height: 1.5rem; text-align: center; };
+  @media all and (min-width: 481px) and (max-width: 768px) { font-size: 2rem; line-height:4rem; text-align: center; }
+}
+
+.atendimento-imagem{
+  width:100%;
+}

@@ -43,23 +43,24 @@ export default function SimpleMenu() {
                     <Link to="/" className="menu-link" >Home</Link>
                     <Link to="/" className="menu-link" >Sobre</Link>
                     <Link to="/" className="menu-link" >Blog</Link>
-                    <Link to="/curso" className="menu-link" >Curso</Link>
+                    {/*<Link to="/curso" className="menu-link" >Curso</Link>*/}
+                    <Link to="/atendimento-individual" className="menu-link" >Atendimento Individual</Link>
 
-                    <div>
-                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                            <span className="menu-link">Atendimentos</span>
-                        </Button>
-                        <Menu
-                            id="simple-menu"
-                            anchorEl={anchorEl}
-                            keepMounted
-                            open={Boolean(anchorEl)}
-                            onClose={handleClose}
-                        >
-                            <MenuItem onClick={handleClose}><Link to="/atendimento-individual" className="menu-link" >Atendimento Individual</Link></MenuItem>
-                            <MenuItem onClick={handleClose}><Link to="/atendimento-em-grupo" className="menu-link" >Atendimento em Grupo</Link></MenuItem>
-                        </Menu>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>*/}
+                    {/*        <span className="menu-link">Atendimentos</span>*/}
+                    {/*    </Button>*/}
+                    {/*    <Menu*/}
+                    {/*        id="simple-menu"*/}
+                    {/*        anchorEl={anchorEl}*/}
+                    {/*        keepMounted*/}
+                    {/*        open={Boolean(anchorEl)}*/}
+                    {/*        onClose={handleClose}*/}
+                    {/*    >*/}
+                    {/*        <MenuItem onClick={handleClose}><Link to="/atendimento-individual" className="menu-link" >Atendimento Individual</Link></MenuItem>*/}
+                    {/*        <MenuItem onClick={handleClose}><Link to="/atendimento-em-grupo" className="menu-link" >Atendimento em Grupo</Link></MenuItem>*/}
+                    {/*    </Menu>*/}
+                    {/*</div>*/}
 
                     <Link to="/" className="menu-link" >Contato</Link>
                 </Grid>

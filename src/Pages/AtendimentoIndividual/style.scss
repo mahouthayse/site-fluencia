@@ -11,45 +11,6 @@
   flex-flow: column wrap;
 }
 
-.atendimento-header-container{
-  background-image: url("../../Assets/Curso/headerTriangle.svg");
-  background-size: cover!important;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height:140vh!important;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.atendimento-header-texto{
-  display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
-  justify-content: center;
-  padding-left: 50px;
-}
-
-.header-titulo-primario{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 4rem;
-  line-height: 5rem;
-  color: #FFFFFF;
-  margin-bottom:3.125rem;
-}
-
-.header-subtitulo-primario{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.625rem;
-  line-height: 2.5rem;
-  color: #FFFFFF;
-
-}
 
 .titulo-primario{
   font-family: 'Roboto', sans-serif;
@@ -62,9 +23,7 @@
   margin-bottom:50px;
 }
 
-.atendimento-header-imagem{
-  width:90%;
-}
+
 
 
 .atendimento-informacoes-container{
