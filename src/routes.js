@@ -5,10 +5,13 @@ import Curso from "./Pages/Curso";
 import Checkout from "./Pages/Checkout";
 import AtendimentoIndividual from "./Pages/AtendimentoIndividual";
 import AtendimentoEmGrupo from "./Pages/AtendimentoEmGrupo";
+import {Provider} from "react-redux";
+import store from "./store";
 
 
 
 const Routes = () => (
+    <Provider store={store}>
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Home} />
@@ -19,6 +22,7 @@ const Routes = () => (
 
         </Switch>
     </BrowserRouter>
+    </Provider>
 );
 
 export default Routes;

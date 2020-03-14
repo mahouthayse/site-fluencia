@@ -3,7 +3,8 @@ import {Grid} from '@material-ui/core';
 import "./style.scss";
 import Footer from "../../Components/Footer";
 import SimpleMenu from "../../Components/Menu";
-import CheckoutComponent from "../../Components/Checkout";
+import CheckoutSteps from "../../Components/CheckoutSteps";
+
 
 
 
@@ -17,7 +18,7 @@ export default class Checkout extends Component{
                 <SimpleMenu/>
 
                 <Grid container className="checkout-content-wrapper" sm={12} lg={12} md={12}>
-                    <CheckoutComponent/>
+                    <CheckoutSteps/>
 
                 </Grid>
 

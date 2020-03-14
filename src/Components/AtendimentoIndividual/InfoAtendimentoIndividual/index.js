@@ -33,6 +33,7 @@ export default class InfoAtendimentoIndividual extends Component{
 
                                     </div>
 
+                                    <div className="info-card-conteudo">
 
                                     <span className="info-card-title"> Aprofunde-se no método Justisse</span>
                                     <span className="info-card-text"> Aprenda e aplique o método de percepção de fertilidade
@@ -41,6 +42,8 @@ export default class InfoAtendimentoIndividual extends Component{
                                     <span className="info-card-title"> Curso online + sessões remotas</span>
                                     <span className="info-card-text"> Você recebe acesso a um curso 100% online e também
                                         terá direito a 5 sessões de acompanhamento individual de 1 hora cada (no Zoom)</span>
+                                    </div>
+
                                 </Grid>
 
                                 <Grid item className="info-card" xs={9} sm={8} md={3}>
@@ -51,7 +54,7 @@ export default class InfoAtendimentoIndividual extends Component{
                                             <span className="ribbon-subtitle">Público e pré-requisito</span>
                                         </div>
                                     </div>
-
+                                    <div className="info-card-conteudo">
                                     <span className="info-card-title"> Público-alvo</span>
                                     <span className="info-card-text">Para quem quer a máxima eficácia do método e um
                                         atendimento personalizado e intimista</span>
@@ -60,6 +63,7 @@ export default class InfoAtendimentoIndividual extends Component{
                                     <span className="info-card-text"> Você recebe um material de apoio completo para aprender
                                         o método desde o básico e suporte personalizado para tirar dúvidas e atingir o uso
                                         perfeito</span>
+                                    </div>
                                 </Grid>
 
                                 <Grid item className="info-card" xs={9} sm={8} md={3}>
@@ -70,10 +74,12 @@ export default class InfoAtendimentoIndividual extends Component{
                                         </div>
                                     </div>
 
+                                    <div className="info-card-conteudo">
                                     <span className="info-card-text"> <b>Carol Fischmann</b> é antropóloga e tem formação como Instrutora
                                 de Saúde Reprodutiva Holística no Justisse College, um curso de dois anos para formar instrutoras
                                 de percepção de fertilidade. Fundadora do projeto Fluência Corporal, Carol atua como instrutura
                                 desde 2017 e já ajudou dezenas de menstruantes.</span>
+                                    </div>
                                 </Grid>
 
                             </Grid>

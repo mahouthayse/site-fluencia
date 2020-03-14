@@ -1,0 +1,18 @@
+.features-individual{
+  background-color: #F0EFEF;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding:50px;
+}
+
+.features-imagem{
+  width:90%;
+}
+
+.features-individual-texto{
+  display: flex;
+  flex-flow: column wrap;
+  padding-left:30px;
+}
