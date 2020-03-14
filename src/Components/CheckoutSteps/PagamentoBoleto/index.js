@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import pagarme from 'pagarme';
+    import {Redirect} from 'react-router-dom';
 
 import {
     Box,
@@ -14,6 +15,7 @@ import {
     Select
 } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
+import PagamentoEmEspera from "../PagamentoEmEspera";
 
 export default function PagamentoBoleto(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
@@ -51,8 +53,6 @@ export default function PagamentoBoleto(nextStep){
 
 
     const handlePay = async () => {
-
-
         try {
             const client = await pagarme.client.connect({ encryption_key: 'ek_live_ZfqxBpFY4S8vDc3ytcJG8oB86AgWxp' });
     
@@ -65,15 +65,18 @@ export default function PagamentoBoleto(nextStep){
                 "name": name,
                 "documents": [{
                     "type": "cpf",
-                "number": documentNumber
+                    "number": documentNumber
                         }]
                     }
             });
             console.log(transaction);
+            return <Redirect to={PagamentoEmEspera} />
     
         } catch (e) {
             console.error(e);
         }
+
+       
     }
 
 

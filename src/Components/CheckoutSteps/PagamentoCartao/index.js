@@ -44,7 +44,7 @@ export default function PagamentoCartao(nextStep){
        
 
         try {
-            const client = await pagarme.client.connect({ encryption_key: 'ek_test_13z89PCzQMTh3pWmC7NjVcHeLWywSg' });
+            const client = await pagarme.client.connect({ encryption_key: 'ek_live_ZfqxBpFY4S8vDc3ytcJG8oB86AgWxp' });
             const cardHash = await client.security.encrypt(card);
             var dateOfBirth = moment(birthday, 'DD/MM/YYYY', true);
             dateOfBirth = dateOfBirth.format('YYYY-MM-DD');
