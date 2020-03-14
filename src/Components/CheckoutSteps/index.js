@@ -1,15 +1,19 @@
 import React from "react";
-// import './style.scss';
+import './style.scss';
 import {Grid} from '@material-ui/core';
 
 import { useSelector, useDispatch } from 'react-redux';
 import Cadastro from "./Cadastro";
 import PagamentoResumo from "./PagamentoResumo";
+import PagamentoEndereco from "./PagamentoEndereco";
+import PagamentoCartao from "./PagamentoCartao";
+import PagamentoBoleto from "./PagamentoBoleto";
+
 
 
 export default function CheckoutSteps(){
-    const { checkout } = useSelector( state => (state.checkout));
-    const {step} = useSelector( state => (state.step));
+    const { checkout } = useSelector( state => state.checkout);
+    const {step} = checkout;
     const dispatch = useDispatch();
 
 
@@ -25,34 +29,31 @@ export default function CheckoutSteps(){
     switch(step) {
         case 1:
             return (
-                <Grid container className="muco-container"  spacing={1}>
-                    <Cadastro nextStep={nextStep}/>
-                    { console.log(step)}
-                </Grid>
+                <Cadastro nextStep={nextStep}/>
             )
         case 2:
             return (
-                <Grid container className="muco-container" spacing={1}>
-                    <PagamentoResumo nextStep={nextStep} previousStep={previousStep} />
-                </Grid>
+                    <PagamentoEndereco nextStep={nextStep} previousStep={previousStep} />
+
             )
-        case 3:
-            // if(muco.status === 'sim'){
-            //     return (
-            //         <Grid container className="muco-container" spacing={1}>
-            //             <StepThree nextStep={nextStep} previousStep={previousStep} />
-            //             { console.log(muco.status)}
-            //         </Grid>
-            //
-            //     )
-            // } else {
-            //     return (
-            //         <Grid container className="muco-container" spacing={1}>
-            //             <StepFour nextStep={nextStep} previousStep={previousStep} />
-            //             { console.log(muco.status)}
-            //         </Grid>
-            //     )
-            // }
+        case 3: 
+                return (
+                        <PagamentoResumo nextStep={nextStep} previousStep={previousStep} />
+                )
+        case 4:
+            if(checkout.paymentMethod === 'cartao'){
+                 return (
+                         <PagamentoCartao nextStep={nextStep} previousStep={previousStep} />
+ 
+                 )
+            } else {
+                return (
+                         <PagamentoBoleto nextStep={nextStep} previousStep={previousStep} />
+    
+                 )
+             }
+        case 5:
+
         default:
             return (
                 alert("Ops! Algo deu errado. Por favor, informe ao suporte do sistema :(")

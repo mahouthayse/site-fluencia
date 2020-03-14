@@ -1,9 +1,8 @@
 import {combineReducers} from "redux";
-import cadastro from "./checkout";
+import checkout from "./checkout";
 
 const reducers = combineReducers({
-   cadastro,
-
+  checkout,
 });
 
 export default reducers;

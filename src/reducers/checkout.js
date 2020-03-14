@@ -4,9 +4,10 @@ const INITIAL_STATE = {
         name: '',
         email: '',
         password: '',
-        created: new Date()
+        created: new Date(),
+        step: 1,
     },
-    message: ''
+    message: '',
 };
 
 export default function checkout(state = INITIAL_STATE, action){
@@ -32,6 +33,104 @@ export default function checkout(state = INITIAL_STATE, action){
                 ...state,
                 checkout: {...state.checkout, paymentMethod: action.paymentMethod},
             }
+
+        case "setStep":
+            return {
+                ...state,
+                checkout: {...state.checkout, step: action.step},
+            }
+
+            case "setBirthday":
+            return {
+                ...state,
+                checkout: {...state.checkout, birthday: action.birthday},
+            }
+
+            case "setPhoneNumber":
+                return {
+                    ...state,
+                    checkout: {...state.checkout, phoneNumber: action.phoneNumber},
+                }
+
+        case "setStreet":
+            return {
+                ...state,
+                checkout: {...state.checkout, street: action.street},
+            }
+
+        case "setStreetNumber":
+            return {
+                ...state,
+                checkout: {...state.checkout, streetNumber: action.streetNumber},
+            }
+    
+        case "setZipcode":
+            return {
+                ...state,
+                checkout: {...state.checkout, zipcode: action.zipcode},
+            }
+
+
+        case "setCountry":
+            return {
+                ...state,
+                checkout: {...state.checkout, country: action.country},
+            }
+
+        case "setStateAd":
+            return {
+                ...state,
+                checkout: {...state.checkout, stateAd: action.stateAd},
+            }
+
+        case "setCity":
+            return {
+                ...state,
+                checkout: {...state.checkout, city: action.city},
+            }
+
+            case "setCardHolderName":
+                return {
+                    ...state,
+                    checkout: {...state.checkout, cardHolderName: action.cardHolderName},
+                }
+
+                case "setInstallments":
+                    return {
+                        ...state,
+                        checkout: {...state.checkout, installments: action.installments},
+                    }
+
+                    case "setDocumentType":
+                        return {
+                            ...state,
+                            checkout: {...state.checkout, documentType: action.documentType},
+                        }
+
+                    case "setCardNumber":
+                        return {
+                            ...state,
+                            checkout: {...state.checkout, cardNumber: action.cardNumber},
+                        }
+
+                        case "setCardCvv":
+                            return {
+                                ...state,
+                                checkout: {...state.checkout, cardCvv: action.cardCvv},
+                            }
+
+                            case "setCardExpirationDate":
+                                return {
+                                    ...state,
+                                    checkout: {...state.checkout, cardExpirationDate: action.cardExpirationDate},
+                                }
+
+                                case "setDocumentNumber":
+                                    return {
+                                        ...state,
+                                        checkout: {...state.checkout, documentNumber: action.documentNumber},
+                                    }
+  
 
 
 
