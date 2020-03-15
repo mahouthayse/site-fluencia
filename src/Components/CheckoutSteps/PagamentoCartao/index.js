@@ -149,11 +149,11 @@ export default function PagamentoCartao(nextStep){
             <input className="checkout-input" id="checkoutNome" type="text" placeholder="Inserir nome impresso no cartão" required value={cardHolderName} onChange={e => dispatch({ type: 'setCardHolderName', cardHolderName: e.target.value})}/>
 
                 <Grid container className="checkout-row" xs={12} lg={12}>
-                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <Grid container item className="checkout-label-column" xs={12} lg={6}>
                     <label htmlFor="checkoutNome" className="checkout-label" >Telefone:</label>
                     <input className="checkout-input-row" id="checkoutNome" type="text" placeholder="(00)00000-0000" required value={phoneNumber} onChange={e => dispatch({ type: 'setPhoneNumber', phoneNumber: e.target.value})}/>
                     </Grid>
-                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <Grid container item className="checkout-label-column" xs={12} lg={6}>
                     <label htmlFor="checkoutNome" className="checkout-label" >Data de nascimento:</label>
                     <input className="checkout-input-row" id="checkoutNome" type="text" placeholder="00/00/0000" required value={birthday} onChange={e => dispatch({ type: 'setBirthday', birthday: e.target.value})}/>
                     </Grid>
@@ -163,12 +163,12 @@ export default function PagamentoCartao(nextStep){
 
                 <Grid container className="checkout-row" xs={12} lg={12}>
 
-                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <Grid container item className="checkout-label-column" xs={12} lg={6}>
                         <label htmlFor="checkoutCvv" className="checkout-label" >Cvv:</label>
                         <input className="checkout-input-row" id="checkoutCvv" type="text" placeholder="Inserir CVV" required value={cardCvv} onChange={e => dispatch({ type: 'setCardCvv', cardCvv: e.target.value})}/>
                     </Grid>
 
-                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <Grid container item className="checkout-label-column" xs={12} lg={6}>
                         <label htmlFor="checkoutDate" className="checkout-label" >Data de validade:</label>
                         <input className="checkout-input-row" id="checkoutDate" type="text" placeholder="00/00" required value={cardExpirationDate} onChange={e => dispatch({ type: 'setCardExpirationDate', cardExpirationDate: e.target.value})}/>
                     </Grid>

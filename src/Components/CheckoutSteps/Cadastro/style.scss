@@ -30,14 +30,14 @@
     box-sizing: border-box;
     border-radius: 5px;
     height:45px;
-    width:25vw;
+    width:20vw;
     margin-bottom:20px;
     text-indent:1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-size: 0.95rem;
     color: #9E9E9E;
-
+    @media all and (max-width: 480px) {width:65vw; }
   }
 
   .button-primary{

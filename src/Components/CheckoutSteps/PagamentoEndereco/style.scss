@@ -1,3 +1,8 @@
+.pagamento-wrapper{
+  @media all and (max-width: 480px) {padding:0; }
+}
+
+
 .checkout-label-column{
   display:flex;
   flex-flow: column wrap;
@@ -21,4 +26,5 @@
   font-weight: normal;
   font-size: 0.95rem;
   color: #9E9E9E;
+  @media all and (max-width: 480px) {width:65vw; }
 }
