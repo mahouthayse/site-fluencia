@@ -2,6 +2,7 @@ import React from "react";
 import './style.scss';
 import {Button, Grid, Box, FormControlLabel, FormControl,  InputLabel, Input} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
+import {Link} from "react-router-dom";
 
 
 export default function Cadastro(nextStep){
@@ -23,7 +24,7 @@ export default function Cadastro(nextStep){
 
                         <label htmlFor="checkoutNome" className="checkout-label" >Nome completo:</label>
                         <input className="checkout-input" id="checkoutNome" type="text" placeholder="Inserir nome e sobrenome" required value={name} onChange={e => dispatch({ type: 'setName', name: e.target.value})}/>
-        
+
                        <label htmlFor="checkoutMail" className="checkout-label">Email:</label>
                        <input className="checkout-input" id="checkoutMail" type="email" placeholder="Inserir email" required value={email} onChange={e => dispatch({ type: 'setEmail', email: e.target.value})}/>
 
@@ -34,9 +35,11 @@ export default function Cadastro(nextStep){
             </Box>
 
 
-            <Box className="form-footer">
+            <Grid item className="form-footer" xs={12} lg={6}>
+
+                <Link to="/" className="checkout-link-primary" >Login</Link>
                 <Button variant="contained" className="button-primary" onClick={handleSubmit}>Próximo</Button>
-            </Box>
+            </Grid>
         </Grid>
     );
 

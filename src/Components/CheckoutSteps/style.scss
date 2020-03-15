@@ -23,3 +23,21 @@
   .checkout-component-form{
     padding:16px;
   }
+
+
+  .checkout-link-primary{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.125rem;
+    display: flex;
+    color: #471E67;
+    text-decoration: none;
+  }
+
+  .form-footer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
