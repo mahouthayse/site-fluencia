@@ -10,7 +10,7 @@ export default class CheckoutContainer extends Component{
         return(
 
 
-            <Grid container className="checkout-component-wrapper" xs={12} md={8}>
+            <Grid container className="checkout-component-wrapper" style={{height: '100%'}} xs={12} md={8}>
 
                 <Hidden only={['xs']}>
                 <Grid item className="checkout-component-side" xs={12} md={6}>
