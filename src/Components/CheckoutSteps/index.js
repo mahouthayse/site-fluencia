@@ -8,6 +8,7 @@ import PagamentoResumo from "./PagamentoResumo";
 import PagamentoEndereco from "./PagamentoEndereco";
 import PagamentoCartao from "./PagamentoCartao";
 import PagamentoBoleto from "./PagamentoBoleto";
+import PagamentoStatus from "./PagamentoStatus";
 
 
 
@@ -26,6 +27,7 @@ export default function CheckoutSteps(){
         dispatch({ type: 'setStep', step: step - 1})
     }
 
+    
     switch(step) {
         case 1:
             return (
@@ -53,7 +55,9 @@ export default function CheckoutSteps(){
                  )
              }
         case 5:
-
+            return(
+                <PagamentoStatus previousStep={previousStep} />
+            )
         default:
             return (
                 alert("Ops! Algo deu errado. Por favor, informe ao suporte do sistema :(")

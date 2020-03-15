@@ -42,7 +42,7 @@ export default function PagamentoBoleto(nextStep){
 
     }
 
-    const handlePay = async (response) => {
+    const handlePay =  () => {
         try {
 
             pagarme.client.connect({api_key: 'ak_live_fefjhmfcIaZqOmhcextCcZMsfFTOXN'})
@@ -70,9 +70,13 @@ export default function PagamentoBoleto(nextStep){
                 dispatch({type: 'setPaymentBarcode', paymentBarcode: barcode});
                 console.log(status, barcode, url);
             });
+
+            
         } catch (e) {
             console.error(e);
         }
+
+        nextStep.nextStep();
 
     }
 

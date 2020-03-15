@@ -12,13 +12,13 @@ export default class CheckoutContainer extends Component{
 
             <Grid container className="checkout-component-wrapper" xs={12} md={8}>
 
-            <Grid item className="checkout-component-side" xs={12} md={6}>
-                <img className="checkout-side-image" src={CheckoutSide}/>
-            </Grid>
+                <Grid item className="checkout-component-side" xs={12} md={6}>
+                    <img className="checkout-side-image" src={CheckoutSide}/>
+                </Grid>
 
-            <Grid item className="checkout-component-form" xs={12} md={6}>
-            <CheckoutSteps/>
-            </Grid>
+                <Grid item className="checkout-component-form" xs={12} md={6}>
+                    <CheckoutSteps/>
+                </Grid>
             </Grid>
 
 
