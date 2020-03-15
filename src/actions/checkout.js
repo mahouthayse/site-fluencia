@@ -67,6 +67,13 @@ const actions = {
         };
     },
 
+    setCoupon: function(coupon) {
+        return {
+            type: "setCoupon",
+            coupon
+        };
+    },
+
     setCardHolderName: function(cardHolderName) {
         return {
             type: "setCardHolderName",

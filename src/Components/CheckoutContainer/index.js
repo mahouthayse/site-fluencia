@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style.scss";
-import {Grid} from "@material-ui/core";
+import {Grid, Hidden} from "@material-ui/core";
 import CheckoutSteps from "../CheckoutSteps";
 import CheckoutSide from "../../Assets/Checkout/imgIndividual.png";
 
@@ -12,9 +12,11 @@ export default class CheckoutContainer extends Component{
 
             <Grid container className="checkout-component-wrapper" xs={12} md={8}>
 
+                <Hidden only={['xs']}>
                 <Grid item className="checkout-component-side" xs={12} md={6}>
                     <img className="checkout-side-image" src={CheckoutSide}/>
                 </Grid>
+                </Hidden>
 
                 <Grid item className="checkout-component-form" xs={12} md={6}>
                     <CheckoutSteps/>

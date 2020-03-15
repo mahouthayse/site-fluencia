@@ -43,12 +43,12 @@ export default function PagamentoEndereco(nextStep){
 
             <Grid container className="checkout-row" xs={12} lg={12}>
 
-                <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                <Grid container item className="checkout-label-column" xs={12} lg={6}>
                     <label htmlFor="checkoutNumbero" className="checkout-label" >Numero:</label>
                     <input className="checkout-input-row" id="checkoutNumero" type="text" placeholder="Inserir numero" required value={checkout.streetNumber} onChange={e => dispatch({ type: 'setStreetNumber', streetNumber: e.target.value})}/>
                 </Grid>
 
-                <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                <Grid container item className="checkout-label-column" xs={12} lg={6}>
                     <label htmlFor="checkoutCEP" className="checkout-label" >Código Postal:</label>
                     <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir CEP" required value={checkout.zipcode} onChange={e => dispatch({ type: 'setZipcode', zipcode: e.target.value})}/>
                 </Grid>
@@ -56,12 +56,12 @@ export default function PagamentoEndereco(nextStep){
             </Grid>
 
                 <Grid container className="checkout-row" xs={12} lg={12}>
-                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <Grid container item className="checkout-label-column" xs={12} lg={6}>
                         <label htmlFor="checkoutPais" className="checkout-label" >País:</label>
                         <input className="checkout-input-row" id="checkoutPais" type="text" placeholder="Inserir País" required value={checkout.country} onChange={e => dispatch({ type: 'setCountry', country: e.target.value})}/>
                     </Grid>
 
-                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <Grid container item className="checkout-label-column" xs={12} lg={6}>
                         <label htmlFor="checkoutEstado" className="checkout-label" >Estado:</label>
                         <input className="checkout-input-row" id="checkoutEstado" type="text" placeholder="Inserir Estado" required value={checkout.stateAd} onChange={e => dispatch({ type: 'setStateAd', stateAd: e.target.value})}/>
                     </Grid>

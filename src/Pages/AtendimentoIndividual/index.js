@@ -161,7 +161,7 @@ export default class AtendimentoIndividual extends Component{
                                 <span className="value-card-text"> 5 sessões de atendimento individual</span>
                                 <Divider/>
 
-                                <Link to="/" className="value-card-link" >Comprar</Link>
+                                <Link to="/checkout" className="value-card-link" >Comprar</Link>
 
                                 <span className="value-card-secondary-text" style={{fontSize: '1rem', marginTop: '16px'}}> Vagas limitadas</span>
                             </Grid>

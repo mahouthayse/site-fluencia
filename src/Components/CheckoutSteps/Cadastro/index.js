@@ -3,6 +3,7 @@ import './style.scss';
 import {Button, Grid, Box, FormControlLabel, FormControl,  InputLabel, Input} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import {Link} from "react-router-dom";
+const axios = require('axios');
 
 
 export default function Cadastro(nextStep){
@@ -12,9 +13,21 @@ export default function Cadastro(nextStep){
     const dispatch = useDispatch();
 
     async function handleSubmit(event){
-        event.preventDefault();
-        // console.log(nextStep.nextStep())
-        nextStep.nextStep();
+        axios.post('http://api-fluenciacorporal-com.umbler.net/users', {
+            name: name,
+            email: email,
+            password: password
+        })
+            .then(function (response) {
+                console.log(response);
+            }).then( () => {
+            event.preventDefault();
+            nextStep.nextStep();
+        })
+            .catch(function (error) {
+                console.log(error);
+            });
+
     }
 
     return(
