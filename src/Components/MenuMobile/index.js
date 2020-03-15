@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import MenuIcon from '@material-ui/icons/Menu';
 import "./style.scss"
 import {Link} from "react-router-dom";
 
@@ -70,7 +71,7 @@ export default function MenuMobile() {
 
     return (
         <div>
-            <Button onClick={toggleDrawer('left', true)}><i className="fas fa-bars fa-3x"></i></Button>
+            <Button onClick={toggleDrawer('left', true)}><MenuIcon/></Button>
             <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
                 {sideList('left')}
             </Drawer>
