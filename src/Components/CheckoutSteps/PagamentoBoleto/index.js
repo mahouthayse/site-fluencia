@@ -38,12 +38,12 @@ export default function PagamentoBoleto(nextStep){
         if(documentType){
             return <React.Fragment>
                 <label htmlFor="checkoutDocument" className="checkout-label" >{ isIndividual ? "CPF" : "CNPJ"}</label>
-                <input 
-                    className="checkout-input" 
-                    id="checkoutDocument" 
-                    type="text" 
-                    placeholder={ isIndividual ? "Insira o seu CPF" : "Insira o seu CNPJ"} 
-                    required value={checkout.documentNumber} 
+                <input
+                    className="checkout-input"
+                    id="checkoutDocument"
+                    type="text"
+                    placeholder={ isIndividual ? "Insira o seu CPF" : "Insira o seu CNPJ"}
+                    required value={checkout.documentNumber}
                     onChange={e => dispatch({ type: 'setDocumentNumber', documentNumber: e.target.value})}
                 />
             </React.Fragment>
@@ -55,9 +55,9 @@ export default function PagamentoBoleto(nextStep){
     const handlePay = async () => {
         try {
             const client = await pagarme.client.connect({ encryption_key: 'ek_live_ZfqxBpFY4S8vDc3ytcJG8oB86AgWxp' });
-    
+
             const transaction = await client.transactions.create({
-                "amount": 100, 
+                "amount": 100,
                 "payment_method": "boleto",
                 "customer":{
                 "type": documentType,
@@ -70,22 +70,21 @@ export default function PagamentoBoleto(nextStep){
                     }
             });
             console.log(transaction);
-            return <Redirect to={PagamentoEmEspera} />
-    
+
         } catch (e) {
             console.error(e);
         }
 
-       
+
     }
 
 
 
     return(
         <Grid container className="pagamento-wrapper"  lg={12} spacing={1}>
-  
 
-            
+
+
          <FormControl component="fieldset">
 
          <RadioGroup row value={checkout.type} onChange={e => dispatch({ type: 'setDocumentType', documentType: e.target.value})}>
@@ -104,5 +103,5 @@ export default function PagamentoBoleto(nextStep){
             </Box>
         </Grid>
     );
-    
+
 }
