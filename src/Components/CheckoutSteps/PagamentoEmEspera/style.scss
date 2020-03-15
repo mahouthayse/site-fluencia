@@ -1,0 +1,97 @@
+.checkout-espera-wrapper{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.wait-text-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.625rem;
+  text-align: center;
+  color: #FFD34E;
+  margin-bottom:32px;
+}
+
+.wait-text-primary{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #404040;
+  margin-bottom:32px;
+
+}
+
+.wait-text-secondary{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #404040;
+}
+
+.barcode{
+  background-color: #F9F9F9;
+  padding:32px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.wait-footer{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top:20px!important;
+}
+
+.wait-text-title-secondary{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  color: #471E67;
+}
+
+.wait-link-primary{
+  background-color: #471E67;
+  border-radius: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding:12px 30px 12px 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+
+.wait-link-secondary{
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  border: 2px solid #471E67;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding:12px 30px 12px 30px;
+  color: #471E67;
+  text-decoration: none;
+}
