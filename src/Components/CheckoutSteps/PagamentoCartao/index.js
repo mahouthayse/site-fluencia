@@ -20,7 +20,7 @@ var moment = require('moment');
 
 export default function PagamentoCartao(nextStep){
     const {checkout} = useSelector( state => (state.checkout));
-    const {installments, name, documentType, email, zipcode, documentNumber, birthday, phoneNumber, street, streetNumber, country,stateAd, city, cardHolderName, cardNumber, cardCvv, cardExpirationDate} = checkout;
+    const {installments, name, documentType, email, zipcode, documentNumber, birthday, phoneNumber, street, streetNumber, country,stateAd, city, cardHolderName, cardNumber, cardCvv, cardExpirationDate, paymentStatus} = checkout;
     const dispatch = useDispatch();
 
     async function next(event){
@@ -44,13 +44,13 @@ export default function PagamentoCartao(nextStep){
 
 
         try {
-            const client = await pagarme.client.connect({ encryption_key: 'ek_test_13z89PCzQMTh3pWmC7NjVcHeLWywSg' });
+            const client = await pagarme.client.connect({api_key: 'ak_live_fefjhmfcIaZqOmhcextCcZMsfFTOXN'});
             const cardHash = await client.security.encrypt(card);
             var dateOfBirth = moment(birthday, 'DD/MM/YYYY', true);
             dateOfBirth = dateOfBirth.format('YYYY-MM-DD');
             var phoneNumberFormat = '+55' + phoneNumber;
             const transaction = await client.transactions.create({
-                "amount": 100,
+                "amount": 149900,
                 "card_hash": cardHash,
                 "installments" : installments,
                 "customer": {
@@ -83,13 +83,18 @@ export default function PagamentoCartao(nextStep){
                   {
                     "id": "1",
                     "title": "Atendimento Individual",
-                    "unit_price": 100,
+                    "unit_price": 149900,
                     "quantity": 1,
                     "tangible": false
                   }
                 ]
+            }).then(response => {
+                var status = response.status;
+                dispatch({type: 'setPaymentStatus', paymentStatus: status});
+                console.log(status);
+            }).then( () =>{
+                nextStep.nextStep();
             });
-            console.log(transaction);
 
         } catch (e) {
             console.error(e);

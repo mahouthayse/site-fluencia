@@ -2,10 +2,7 @@ import React, {Component} from "react";
 import pagarme from 'pagarme';
 import {Box, Button, FormControl, FormControlLabel, Grid, Radio, RadioGroup} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
-import {Redirect} from "react-router-dom";
-import PagamentoEmEspera from "../PagamentoStatus";
-import {render, ReactDOM, findDOMNode} from "react-dom";
-import Checkout from "../../../Pages/Checkout";
+
 
 export default function PagamentoBoleto(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
@@ -44,10 +41,9 @@ export default function PagamentoBoleto(nextStep){
 
     const handlePay =  () => {
         try {
-
             pagarme.client.connect({api_key: 'ak_live_fefjhmfcIaZqOmhcextCcZMsfFTOXN'})
                 .then(client => client.transactions.create({
-                    amount: 1000,
+                    amount: 149900,
                     payment_method: 'boleto',
                     capture: 'true',
                     customer: {
@@ -69,14 +65,16 @@ export default function PagamentoBoleto(nextStep){
                 dispatch({type: 'setPaymentUrl', paymentUrl: url});
                 dispatch({type: 'setPaymentBarcode', paymentBarcode: barcode});
                 console.log(status, barcode, url);
+            }).then( () =>{
+                nextStep.nextStep();
             });
 
-            
+
         } catch (e) {
             console.error(e);
         }
 
-        nextStep.nextStep();
+
 
     }
 

@@ -23,7 +23,7 @@ const dados = {
 
 export default function PagamentoResumo(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
-    const {paymentMethod} = useSelector(state => (state.checkout));
+    const {paymentMethod, coupon} = checkout;
     const dispatch = useDispatch();
 
     async function next(event){
@@ -47,11 +47,16 @@ export default function PagamentoResumo(nextStep){
 
 
             <FormControl component="fieldset">
-                <RadioGroup column value={checkout.paymentMethod} onChange={e => dispatch({ type: 'setPaymentMethod', paymentMethod: e.target.value})}>
+                <RadioGroup column value={paymentMethod} onChange={e => dispatch({ type: 'setPaymentMethod', paymentMethod: e.target.value})}>
                     <FormControlLabel value={"cartao"} control={<Radio />} label="Cartão de crédito" />
                     <FormControlLabel value={"boleto"} control={<Radio />} label="Boleto Bancário" />
                 </RadioGroup>
             </FormControl>
+
+            <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                <label htmlFor="checkoutCupom" className="checkout-label" >Cupom de desconto:</label>
+                <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir cupom" value={coupon} onChange={e => dispatch({ type: 'setZipcode', zipcode: e.target.value})}/>
+            </Grid>
 
             <Grid item className="form-footer" xs={12} lg={12}>
                 <button className="button-secondary" onClick={back}>Voltar</button>

@@ -12,7 +12,7 @@ import {faClock, faCheckCircle, faTimesCircle} from "@fortawesome/free-regular-s
 
 export default function CheckoutSteps(){
     const { checkout } = useSelector( state => state.checkout);
-    const {paymentStatus, paymentUrl} = checkout;
+    const {paymentStatus, paymentUrl, paymentBarcode} = checkout;
 
 
 
@@ -29,12 +29,11 @@ export default function CheckoutSteps(){
 
                     <Grid item className="barcode" xs={12} md={10}>
                         <span className="wait-text-title-secondary"> Código de barras </span>
-                        <span className="wait-text-secondary">{paymentUrl}</span>
+                        <span className="wait-text-secondary">{paymentBarcode}</span>
                     </Grid>
 
                     <Grid item className="wait-footer" xs={12} md={12}>
-                        <Link to="/" className="wait-link-primary" >Copiar</Link>
-                        <Link to="/" className="wait-link-secondary" >Visualizar boleto</Link>
+                        <a href={paymentUrl} className="wait-link-secondary" >Visualizar boleto</a>
                     </Grid>
 
                 </Grid>
