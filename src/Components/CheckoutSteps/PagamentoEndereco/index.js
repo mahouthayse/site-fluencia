@@ -31,28 +31,42 @@ export default function PagamentoEndereco(nextStep){
 
     return(
         <Grid container className="pagamento-wrapper"  lg={12} spacing={1}>
-  
-  <span> Endereço de cobrança</span>
-            
+
+        <span> Endereço de cobrança</span>
+
             <FormControl component="fieldset">
             <label htmlFor="checkoutRua" className="checkout-label" >Nome de cobrança:</label>
             <input className="checkout-input" id="checkoutNome" type="text" placeholder="Inserir nome e sobrenome" required value={checkout.name} onChange={e => dispatch({ type: 'setName', name: e.target.value})}/>
 
             <label htmlFor="checkoutRua" className="checkout-label" >Rua:</label>
             <input className="checkout-input" id="checkoutRua" type="text" placeholder="Inserir rua" required value={checkout.street} onChange={e => dispatch({ type: 'setStreet', street: e.target.value})}/>
-            <label htmlFor="checkoutNumbero" className="checkout-label" >Numero:</label>
-            <input className="checkout-input" id="checkoutNumero" type="text" placeholder="Inserir numero" required value={checkout.streetNumber} onChange={e => dispatch({ type: 'setStreetNumber', streetNumber: e.target.value})}/>
 
-           
-            <label htmlFor="checkoutCEP" className="checkout-label" >Código Postal:</label>
-            <input className="checkout-input" id="checkoutCEP" type="text" placeholder="Inserir CEP" required value={checkout.zipcode} onChange={e => dispatch({ type: 'setZipcode', zipcode: e.target.value})}/>
+            <Grid container className="checkout-row" xs={12} lg={12}>
 
-            <label htmlFor="checkoutPais" className="checkout-label" >País:</label>
-            <input className="checkout-input" id="checkoutPais" type="text" placeholder="Inserir País" required value={checkout.country} onChange={e => dispatch({ type: 'setCountry', country: e.target.value})}/>
+                <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <label htmlFor="checkoutNumbero" className="checkout-label" >Numero:</label>
+                    <input className="checkout-input-row" id="checkoutNumero" type="text" placeholder="Inserir numero" required value={checkout.streetNumber} onChange={e => dispatch({ type: 'setStreetNumber', streetNumber: e.target.value})}/>
+                </Grid>
 
-            <label htmlFor="checkoutEstado" className="checkout-label" >Estado:</label>
-            <input className="checkout-input" id="checkoutEstado" type="text" placeholder="Inserir Estado" required value={checkout.stateAd} onChange={e => dispatch({ type: 'setStateAd', stateAd: e.target.value})}/>
+                <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                    <label htmlFor="checkoutCEP" className="checkout-label" >Código Postal:</label>
+                    <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir CEP" required value={checkout.zipcode} onChange={e => dispatch({ type: 'setZipcode', zipcode: e.target.value})}/>
+                </Grid>
 
+            </Grid>
+
+                <Grid container className="checkout-row" xs={12} lg={12}>
+                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                        <label htmlFor="checkoutPais" className="checkout-label" >País:</label>
+                        <input className="checkout-input-row" id="checkoutPais" type="text" placeholder="Inserir País" required value={checkout.country} onChange={e => dispatch({ type: 'setCountry', country: e.target.value})}/>
+                    </Grid>
+
+                    <Grid container item className="checkout-label-column" xs={6} lg={6}>
+                        <label htmlFor="checkoutEstado" className="checkout-label" >Estado:</label>
+                        <input className="checkout-input-row" id="checkoutEstado" type="text" placeholder="Inserir Estado" required value={checkout.stateAd} onChange={e => dispatch({ type: 'setStateAd', stateAd: e.target.value})}/>
+                    </Grid>
+
+                </Grid>
             <label htmlFor="checkoutCidade" className="checkout-label" >Cidade:</label>
             <input className="checkout-input" id="checkoutCidade" type="text" placeholder="Inserir Cidade" required value={checkout.city} onChange={e => dispatch({ type: 'setCity', city: e.target.value})}/>
 
@@ -65,5 +79,5 @@ export default function PagamentoEndereco(nextStep){
             </Box>
         </Grid>
     );
-    
+
 }

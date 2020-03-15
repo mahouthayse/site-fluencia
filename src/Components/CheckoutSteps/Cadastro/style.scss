@@ -1,20 +1,20 @@
 .checkout-cadastro-wrapper{
     display:flex;
     flex-flow: column wrap;
-    padding:30px;
-  
+    padding:16px;
+
   }
-  
+
   .checkout-label-column{
     display:flex;
     flex-flow: column wrap;
   }
-  
+
   .checkout-row{
     display:flex;
     flex-flow: row wrap;
   }
-  
+
   .checkout-label{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -23,7 +23,7 @@
     line-height: 1.5rem;
     color: #471E67;
   }
-  
+
   .checkout-input{
     background: #FFFFFF;
     border: 1px solid #471E67;
@@ -37,5 +37,5 @@
     font-weight: normal;
     font-size: 0.95rem;
     color: #9E9E9E;
-  
+
   }
