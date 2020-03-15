@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import {Grid, Hidden} from "@material-ui/core";
 import {Link} from 'react-router-dom';
 import "./style.scss";
+import MenuMobile from "../MenuMobile";
 
 export default function SimpleMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,20 +21,7 @@ export default function SimpleMenu() {
     return (
         <div>
             <Hidden only={['lg', 'xl', 'md']}>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                Open Menu
-            </Button>
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
-            </Menu>
+                <MenuMobile/>
             </Hidden>
 
             <Hidden only={['sm', 'xs']}>

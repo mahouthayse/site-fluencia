@@ -3,7 +3,7 @@ import pagarme from 'pagarme';
 import {Box, Button, FormControl, FormControlLabel, Grid, Radio, RadioGroup} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import {Redirect} from "react-router-dom";
-import PagamentoEmEspera from "../PagamentoEmEspera";
+import PagamentoEmEspera from "../PagamentoStatus";
 import {render, ReactDOM, findDOMNode} from "react-dom";
 import Checkout from "../../../Pages/Checkout";
 
