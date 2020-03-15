@@ -12,7 +12,7 @@ export default function Cadastro(nextStep){
     const {email, password, name} = checkout
     const dispatch = useDispatch();
 
-    async function handleSubmit(e){
+    async function handleSubmit(event){
         axios.post('http://api-fluenciacorporal-com.umbler.net/users', {
             name: name,
             email: email,
@@ -21,7 +21,7 @@ export default function Cadastro(nextStep){
             .then(function (response) {
                 console.log(response);
             }).then( () => {
-            e.preventDefault();
+            event.preventDefault();
             nextStep.nextStep();
         })
             .catch(function (error) {
