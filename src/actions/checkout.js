@@ -130,6 +130,27 @@ const actions = {
         };
     },
 
+    setPaymentStatus: function(paymentStatus) {
+        return {
+            type: "setPaymentStatus",
+            paymentStatus
+        };
+    },
+
+    setPaymentUrl: function(paymentUrl) {
+        return {
+            type: "setPaymentUrl",
+            paymentUrl
+        };
+    },
+
+    setPaymentBarcode: function(paymentBarcode) {
+        return {
+            type: "setPaymentBarcode",
+            paymentBarcode
+        };
+    },
+
 
 
 

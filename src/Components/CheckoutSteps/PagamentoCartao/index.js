@@ -41,10 +41,10 @@ export default function PagamentoCartao(nextStep){
             card_cvv: cardCvv,
         }
 
-       
+
 
         try {
-            const client = await pagarme.client.connect({ encryption_key: 'ek_live_ZfqxBpFY4S8vDc3ytcJG8oB86AgWxp' });
+            const client = await pagarme.client.connect({ encryption_key: 'ek_test_13z89PCzQMTh3pWmC7NjVcHeLWywSg' });
             const cardHash = await client.security.encrypt(card);
             var dateOfBirth = moment(birthday, 'DD/MM/YYYY', true);
             dateOfBirth = dateOfBirth.format('YYYY-MM-DD');
@@ -90,24 +90,24 @@ export default function PagamentoCartao(nextStep){
                 ]
             });
             console.log(transaction);
-    
+
         } catch (e) {
             console.error(e);
         }
     }
 
-    const renderDocumentInput = () => { 
+    const renderDocumentInput = () => {
         const isIndividual = documentType === 'individual';
 
         if(documentType){
             return <React.Fragment>
                 <label htmlFor="checkoutDocument" className="checkout-label" >{ isIndividual ? "CPF" : "CNPJ"}</label>
-                <input 
-                    className="checkout-input" 
-                    id="checkoutDocument" 
-                    type="text" 
-                    placeholder={ isIndividual ? "Insira o seu CPF" : "Insira o seu CNPJ"} 
-                    required value={checkout.documentNumber} 
+                <input
+                    className="checkout-input"
+                    id="checkoutDocument"
+                    type="text"
+                    placeholder={ isIndividual ? "Insira o seu CPF" : "Insira o seu CNPJ"}
+                    required value={checkout.documentNumber}
                     onChange={e => dispatch({ type: 'setDocumentNumber', documentNumber: e.target.value})}
                 />
             </React.Fragment>
@@ -117,8 +117,8 @@ export default function PagamentoCartao(nextStep){
 
     return(
         <Grid container className="pagamento-wrapper"  lg={12} spacing={1}>
-  
-            
+
+
             <FormControl component="fieldset">
 
 
@@ -143,23 +143,23 @@ export default function PagamentoCartao(nextStep){
 
             <label htmlFor="checkoutNome" className="checkout-label" >Nome impresso no cartão:</label>
             <input className="checkout-input" id="checkoutNome" type="text" placeholder="Inserir nome impresso no cartão" required value={cardHolderName} onChange={e => dispatch({ type: 'setCardHolderName', cardHolderName: e.target.value})}/>
-            
+
             <label htmlFor="checkoutNome" className="checkout-label" >Telefone:</label>
             <input className="checkout-input" id="checkoutNome" type="text" placeholder="Telefone" required value={phoneNumber} onChange={e => dispatch({ type: 'setPhoneNumber', phoneNumber: e.target.value})}/>
-            
+
             <label htmlFor="checkoutNome" className="checkout-label" >Data de nascimento:</label>
             <input className="checkout-input" id="checkoutNome" type="text" placeholder="Inserir nome impresso no cartão" required value={birthday} onChange={e => dispatch({ type: 'setBirthday', birthday: e.target.value})}/>
 
             <label htmlFor="checkoutRua" className="checkout-label" >Número do cartão:</label>
             <input className="checkout-input" id="checkoutNumero" type="text" placeholder="Inserir numero do cartão" required value={cardNumber} onChange={e => dispatch({ type: 'setCardNumber', cardNumber: e.target.value})}/>
-            
+
             <label htmlFor="checkoutCvv" className="checkout-label" >Cvv:</label>
             <input className="checkout-input" id="checkoutCvv" type="text" placeholder="Inserir CVV" required value={cardCvv} onChange={e => dispatch({ type: 'setCardCvv', cardCvv: e.target.value})}/>
-           
+
             <label htmlFor="checkoutDate" className="checkout-label" >Data de validade:</label>
             <input className="checkout-input" id="checkoutDate" type="text" placeholder="00/00" required value={cardExpirationDate} onChange={e => dispatch({ type: 'setCardExpirationDate', cardExpirationDate: e.target.value})}/>
 
-    
+
 
             </FormControl>
 
@@ -169,5 +169,5 @@ export default function PagamentoCartao(nextStep){
             </Box>
         </Grid>
     );
-    
+
 }

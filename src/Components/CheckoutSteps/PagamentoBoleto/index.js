@@ -1,26 +1,17 @@
 import React, {Component} from "react";
 import pagarme from 'pagarme';
-    import {Redirect} from 'react-router-dom';
-
-import {
-    Box,
-    Button,
-    FormControl,
-    FormControlLabel,
-    FormHelperText,
-    Grid,
-    MenuItem,
-    Radio,
-    RadioGroup,
-    Select
-} from '@material-ui/core';
+import {Box, Button, FormControl, FormControlLabel, Grid, Radio, RadioGroup} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
+import {Redirect} from "react-router-dom";
 import PagamentoEmEspera from "../PagamentoEmEspera";
+import {render, ReactDOM, findDOMNode} from "react-dom";
+import Checkout from "../../../Pages/Checkout";
 
 export default function PagamentoBoleto(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
     const {documentType, documentNumber, name, country} = checkout;
     const dispatch = useDispatch();
+
 
     async function next(event){
         event.preventDefault();
@@ -43,7 +34,7 @@ export default function PagamentoBoleto(nextStep){
                     id="checkoutDocument"
                     type="text"
                     placeholder={ isIndividual ? "Insira o seu CPF" : "Insira o seu CNPJ"}
-                    required value={checkout.documentNumber}
+                    required value={documentNumber}
                     onChange={e => dispatch({ type: 'setDocumentNumber', documentNumber: e.target.value})}
                 />
             </React.Fragment>
@@ -51,33 +42,39 @@ export default function PagamentoBoleto(nextStep){
 
     }
 
-
-    const handlePay = async () => {
+    const handlePay = async (response) => {
         try {
-            const client = await pagarme.client.connect({ encryption_key: 'ek_live_ZfqxBpFY4S8vDc3ytcJG8oB86AgWxp' });
 
-            const transaction = await client.transactions.create({
-                "amount": 100,
-                "payment_method": "boleto",
-                "customer":{
-                "type": documentType,
-                "country": country,
-                "name": name,
-                "documents": [{
-                    "type": "cpf",
-                    "number": documentNumber
-                        }]
-                    }
+            pagarme.client.connect({api_key: 'ak_live_fefjhmfcIaZqOmhcextCcZMsfFTOXN'})
+                .then(client => client.transactions.create({
+                    amount: 1000,
+                    payment_method: 'boleto',
+                    capture: 'true',
+                    customer: {
+                        type: documentType,
+                        country: 'br',
+                        name: name,
+                        documents: [
+                            {
+                                type: 'cpf',
+                                number: documentNumber,
+                            },
+                        ],
+                    },
+                })).then(response => {
+                var status = response.status;
+                var url = response.boleto_url;
+                var barcode = response.boleto_barcode;
+                dispatch({type: 'setPaymentStatus', paymentStatus: status});
+                dispatch({type: 'setPaymentUrl', paymentUrl: url});
+                dispatch({type: 'setPaymentBarcode', paymentBarcode: barcode});
+                console.log(status, barcode, url);
             });
-            console.log(transaction);
-
         } catch (e) {
             console.error(e);
         }
 
-
     }
-
 
 
     return(

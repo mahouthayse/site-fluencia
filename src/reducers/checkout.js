@@ -63,7 +63,7 @@ export default function checkout(state = INITIAL_STATE, action){
                 ...state,
                 checkout: {...state.checkout, streetNumber: action.streetNumber},
             }
-    
+
         case "setZipcode":
             return {
                 ...state,
@@ -85,53 +85,69 @@ export default function checkout(state = INITIAL_STATE, action){
 
         case "setCity":
             return {
-                ...state,
-                checkout: {...state.checkout, city: action.city},
+            ...state,
+            checkout: {...state.checkout, city: action.city},
             }
 
-            case "setCardHolderName":
-                return {
-                    ...state,
-                    checkout: {...state.checkout, cardHolderName: action.cardHolderName},
-                }
+        case "setCardHolderName":
+            return {
+            ...state,
+            checkout: {...state.checkout, cardHolderName: action.cardHolderName},
+            }
 
-                case "setInstallments":
-                    return {
-                        ...state,
-                        checkout: {...state.checkout, installments: action.installments},
-                    }
+        case "setInstallments":
+            return {
+            ...state,
+            checkout: {...state.checkout, installments: action.installments},
+            }
 
-                    case "setDocumentType":
-                        return {
-                            ...state,
-                            checkout: {...state.checkout, documentType: action.documentType},
-                        }
+        case "setDocumentType":
+            return {
+            ...state,
+            checkout: {...state.checkout, documentType: action.documentType},
+            }
 
-                    case "setCardNumber":
-                        return {
-                            ...state,
-                            checkout: {...state.checkout, cardNumber: action.cardNumber},
-                        }
+        case "setCardNumber":
+            return {
+            ...state,
+            checkout: {...state.checkout, cardNumber: action.cardNumber},
+            }
 
-                        case "setCardCvv":
-                            return {
-                                ...state,
-                                checkout: {...state.checkout, cardCvv: action.cardCvv},
-                            }
+        case "setCardCvv":
+            return {
+            ...state,
+            checkout: {...state.checkout, cardCvv: action.cardCvv},
+            }
 
-                            case "setCardExpirationDate":
-                                return {
-                                    ...state,
-                                    checkout: {...state.checkout, cardExpirationDate: action.cardExpirationDate},
-                                }
+        case "setCardExpirationDate":
+            return {
+            ...state,
+            checkout: {...state.checkout, cardExpirationDate: action.cardExpirationDate},
+            }
 
-                                case "setDocumentNumber":
-                                    return {
-                                        ...state,
-                                        checkout: {...state.checkout, documentNumber: action.documentNumber},
-                                    }
-  
+        case "setDocumentNumber":
+            return {
+                ...state,
+                checkout: {...state.checkout, documentNumber: action.documentNumber},
+            }
 
+        case "setPaymentStatus":
+            return {
+                ...state,
+                checkout: {...state.checkout, paymentStatus: action.paymentStatus},
+            }
+
+        case "setPaymentUrl":
+            return {
+                ...state,
+                checkout: {...state.checkout, paymentUrl: action.paymentUrl},
+            }
+
+        case "setPaymentBarcode":
+            return {
+                ...state,
+                checkout: {...state.checkout, paymentBarcode: action.paymentBarcode},
+            }
 
 
         default:
