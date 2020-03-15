@@ -38,11 +38,14 @@ export default function PagamentoResumo(nextStep){
     return(
         <Grid container className="pagamento-wrapper"  lg={12} spacing={1}>
 
-            <span> Resumo da compra</span>
-            <span>{dados.title} </span> 
-            <span> {dados.price}</span>
-  
-            
+            <span className="checkout-title"> Resumo da compra</span>
+
+            <Grid item className="form-resumo" xs={12} lg={12}>
+                <span className="resumo-text"><b>{dados.title} </b></span>
+            <span className="resumo-text"> R${dados.price}</span>
+            </Grid>
+
+
             <FormControl component="fieldset">
                 <RadioGroup column value={checkout.paymentMethod} onChange={e => dispatch({ type: 'setPaymentMethod', paymentMethod: e.target.value})}>
                     <FormControlLabel value={"cartao"} control={<Radio />} label="Cartão de crédito" />
@@ -50,11 +53,11 @@ export default function PagamentoResumo(nextStep){
                 </RadioGroup>
             </FormControl>
 
-            <Box className="footer-secondary-2">
-                <Button variant="contained" className="button-primary" onClick={back}>Anterior</Button>
-                <Button variant="contained" className="button-primary" onClick={next}>Próximo</Button>
-            </Box>
+            <Grid item className="form-footer" xs={12} lg={12}>
+                <button className="button-secondary" onClick={back}>Voltar</button>
+                <button className="button-primary" onClick={next}>Próximo</button>
+            </Grid>
         </Grid>
     );
-    
+
 }

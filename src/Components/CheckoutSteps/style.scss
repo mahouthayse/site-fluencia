@@ -38,6 +38,22 @@
   .form-footer{
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
+  }
+
+  .button-secondary{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #471E67;
+    border: none;
+    background-color: transparent;
+    border-radius: 2.95409px;
   }

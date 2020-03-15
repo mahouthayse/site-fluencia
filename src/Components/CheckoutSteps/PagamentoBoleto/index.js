@@ -94,10 +94,10 @@ export default function PagamentoBoleto(nextStep){
 
             </FormControl>
 
-            <Box className="footer-secondary-2">
-                <Button variant="contained" className="button-primary" onClick={back}>Anterior</Button>
+            <Grid item className="form-footer" xs={12} lg={12}>
+                <Button variant="contained" className="button-secondary" onClick={back}>Anterior</Button>
                 <Button variant="contained" className="button-primary" onClick={handlePay}>Comprar</Button>
-            </Box>
+            </Grid>
         </Grid>
     );
 

@@ -32,7 +32,7 @@ export default function PagamentoEndereco(nextStep){
     return(
         <Grid container className="pagamento-wrapper"  lg={12} spacing={1}>
 
-        <span> Endereço de cobrança</span>
+            <span className="checkout-title"> Endereço de cobrança</span>
 
             <FormControl component="fieldset">
             <label htmlFor="checkoutRua" className="checkout-label" >Nome de cobrança:</label>
@@ -73,10 +73,10 @@ export default function PagamentoEndereco(nextStep){
 
             </FormControl>
 
-            <Box className="footer-secondary-2">
-                <Button variant="contained" className="button-primary" onClick={back}>Anterior</Button>
-                <Button variant="contained" className="button-primary" onClick={next}>Próximo</Button>
-            </Box>
+            <Grid item className="form-footer" xs={12} lg={12}>
+                <button className="button-secondary" onClick={back}>Voltar</button>
+                <button className="button-primary" onClick={next}>Próximo</button>
+            </Grid>
         </Grid>
     );
 

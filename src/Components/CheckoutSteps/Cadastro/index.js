@@ -35,10 +35,10 @@ export default function Cadastro(nextStep){
             </Box>
 
 
-            <Grid item className="form-footer" xs={12} lg={6}>
+            <Grid item className="form-footer" xs={12} lg={12}>
 
                 <Link to="/" className="checkout-link-primary" >Login</Link>
-                <Button variant="contained" className="button-primary" onClick={handleSubmit}>Próximo</Button>
+                <button className="button-primary" onClick={handleSubmit}>Próximo</button>
             </Grid>
         </Grid>
     );

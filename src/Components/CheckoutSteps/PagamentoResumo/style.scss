@@ -3,3 +3,30 @@
     padding:30px;
     flex-flow: column wrap;
 }
+
+.checkout-title{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #471E67;
+    margin-bottom:32px;
+}
+
+.form-resumo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 32px!important;
+}
+
+.resumo-text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #404040;
+}
