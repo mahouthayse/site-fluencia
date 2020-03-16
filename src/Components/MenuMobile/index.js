@@ -43,25 +43,25 @@ export default function MenuMobile() {
                     <ListItemText><Link to="/" className="menu-link-primario" >Home</Link></ListItemText>
                     </ListItem>
 
-                <ListItem>
-                    <ListItemText><Link to="/" className="menu-link-primario" >Sobre</Link></ListItemText>
-                </ListItem>
+                {/*<ListItem>*/}
+                {/*    <ListItemText><Link to="/" className="menu-link-primario" >Sobre</Link></ListItemText>*/}
+                {/*</ListItem>*/}
 
-                <ListItem>
-                    <ListItemText><Link to="/" className="menu-link-primario" >Blog</Link></ListItemText>
-                </ListItem>
+                {/*<ListItem>*/}
+                {/*    <ListItemText><Link to="/" className="menu-link-primario" >Blog</Link></ListItemText>*/}
+                {/*</ListItem>*/}
 
                 <ListItem>
                     <ListItemText><Link to="/atendimento-individual" className="menu-link-primario" >Atendimento Individual</Link></ListItemText>
                 </ListItem>
 
-                <ListItem>
-                    <ListItemText><Link to="/" className="menu-link-primario" >Contato</Link></ListItemText>
-                </ListItem>
+                {/*<ListItem>*/}
+                {/*    <ListItemText><Link to="/" className="menu-link-primario" >Contato</Link></ListItemText>*/}
+                {/*</ListItem>*/}
 
-                <ListItem>
-                    <ListItemText><Link to="/" className="menu-link-primario" >Área da aluna</Link></ListItemText>
-                </ListItem>
+                {/*<ListItem>*/}
+                {/*    <ListItemText><Link to="/" className="menu-link-primario" >Área da aluna</Link></ListItemText>*/}
+                {/*</ListItem>*/}
 
             </List>
 
