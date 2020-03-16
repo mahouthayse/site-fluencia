@@ -10,7 +10,7 @@ import {
     MenuItem,
     Radio,
     RadioGroup,
-    Select
+    Select, TextField
 } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import "./style.scss";
@@ -62,7 +62,37 @@ export default function PagamentoEndereco(nextStep){
                     </Grid>
                     <Grid container item className="checkout-label-column" xs={12} md={6}>
                         <label htmlFor="checkoutEstado" className="checkout-label" >Estado:</label>
-                        <input className="checkout-input-row" id="checkoutEstado" type="text" placeholder="Inserir Estado" required value={checkout.stateAd} onChange={e => dispatch({ type: 'setStateAd', stateAd: e.target.value})}/>
+
+                        <TextField select id="parcelas" variant="outlined" margin="dense" value={(stateAd === '') ? 'Selecione seu estado' : checkout.stateAd} placeholder="Estados" onChange={e => dispatch({ type: 'setStateAd', stateAd: e.target.value})}>
+                            <MenuItem value={"ac"}>Acre</MenuItem>
+                            <MenuItem value={"al"}>Alagoas</MenuItem>
+                            <MenuItem value={"ap"}>Amapá</MenuItem>
+                            <MenuItem value={"am"}>Amazonas</MenuItem>
+                            <MenuItem value={"ba"}>Bahia</MenuItem>
+                            <MenuItem value={"ce"}>Ceará</MenuItem>
+                            <MenuItem value={"df"}>Distrito Federal</MenuItem>
+                            <MenuItem value={"es"}>Espírito Santo</MenuItem>
+                            <MenuItem value={"go"}>Goiás</MenuItem>
+                            <MenuItem value={"ma"}>Maranhão</MenuItem>
+                            <MenuItem value={"mt"}>Mato Grosso</MenuItem>
+                            <MenuItem value={"ms"}>Mato Grosso do Sul</MenuItem>
+                            <MenuItem value={"mg"}>Minas Gerais</MenuItem>
+                            <MenuItem value={"pa"}>Pará</MenuItem>
+                            <MenuItem value={"pb"}>Paraíba</MenuItem>
+                            <MenuItem value={"pr"}>Paraná</MenuItem>
+                            <MenuItem value={"pe"}>Pernambuco</MenuItem>
+                            <MenuItem value={"pi"}>Piauí</MenuItem>
+                            <MenuItem value={"rj"}>Rio de Janeiro</MenuItem>
+                            <MenuItem value={"rn"}>Rio Grande do Norte</MenuItem>
+                            <MenuItem value={"rs"}>Rio Grande do Sul</MenuItem>
+                            <MenuItem value={"ro"}>Rondônia</MenuItem>
+                            <MenuItem value={"rr"}>Roraima</MenuItem>
+                            <MenuItem value={"sc"}>Santa Catarina</MenuItem>
+                            <MenuItem value={"sp"}>São Paulo</MenuItem>
+                            <MenuItem value={"se"}>Sergipe</MenuItem>
+                            <MenuItem value={"to"}>Tocantins</MenuItem>
+                        </TextField>
+
                     </Grid>
                 </Grid>
                 <label htmlFor="checkoutCidade" className="checkout-label" >Cidade:</label>

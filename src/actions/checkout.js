@@ -1,4 +1,19 @@
 const actions = {
+    setStep: function(step) {
+        return {
+            type: "setStep",
+            step
+        };
+    },
+
+    setLogin: function(login) {
+        return {
+            type: "setLogin",
+            login
+        };
+    },
+
+
     setName: function(name) {
         return {
             type: "setName",
@@ -16,12 +31,6 @@ const actions = {
         return {
             type: "setPassword",
             password
-        };
-    },
-    setStep: function(step) {
-        return {
-            type: "setStep",
-            step
         };
     },
 

@@ -6,12 +6,26 @@ const INITIAL_STATE = {
         password: '',
         created: new Date(),
         step: 1,
+        login: false,
     },
     message: '',
 };
 
 export default function checkout(state = INITIAL_STATE, action){
     switch(action.type) {
+
+        case "setStep":
+            return {
+                ...state,
+                checkout: {...state.checkout, step: action.step},
+            }
+
+        case "setLogin":
+            return {
+                ...state,
+                checkout: {...state.checkout, login: action.login},
+            }
+
         case "setName":
             return {
                 ...state,
@@ -34,11 +48,7 @@ export default function checkout(state = INITIAL_STATE, action){
                 checkout: {...state.checkout, paymentMethod: action.paymentMethod},
             }
 
-        case "setStep":
-            return {
-                ...state,
-                checkout: {...state.checkout, step: action.step},
-            }
+
 
             case "setBirthday":
             return {
