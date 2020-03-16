@@ -28,12 +28,13 @@ export default class Presentation extends Component{
 
                         <Grid container className="presentation-text-wrapper" xs={12} lg={7} md={8}>
                             <span className="presentation-title"> Olá menstruante!</span>
-                            <span className="presentation-text">Aqui na Fluência Corporal, você finalmente vai entender
-                                seu próprio corpo! Quero te ajudar a entender a importância de ovular, como reconhecer
-                                seu período fértil com precisão e como se reconciliar com sua ciclicidade. Tudo baseado
-                                nas melhores evidências científicas e conhecimentos tradicionais.</span>
-                            <span className="presentation-text">Então pegue uma xícara de chá, um pedaço de bolo e chega
+                            <span className="presentation-text">Eu sou a Carol Fischmann, idealizadora do projeto
+                                Fluência Corporal. Aqui, você finalmente vai entender seu próprio corpo! Quero te ajudar
+                                a entender a importância de ovular, a reconhecer seu período fértil com precisão e a se
+                                reconciliar com sua ciclicidade. Tudo baseado nas melhores evidências científicas e
+                                conhecimentos tradicionais. Então pegue uma xícara de chá, um pedaço de bolo e chega
                                 junto que a conversa vai ser boa!</span>
+
                         </Grid>
 
                     </Grid>

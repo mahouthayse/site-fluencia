@@ -24,15 +24,32 @@ export default class Newsletter extends Component{
                         <span className="newsletter-text"> Assine nossa newsletter e acompanhe nossos conteúdos em
                             primeira mão!</span>
 
-                            <form action="https://paginas.rocks/Pages/Index/343790" method="post" >
-                                <input id="id" name="id" type="hidden" value="343790" />
-                                <input id="pid" name="pid" type="hidden" value="13011807" />
-                                <input id="list_id" name="list_id" type="hidden" value="343790" />
-                                <input id="provider" name="provider" type="hidden" value="leadlovers" />
-                                <input class="newsletter-input" id="email" name="email" placeholder="Informe o seu email" type="text" />
-                                <button class="newsletter-button"  type="submit"><FontAwesomeIcon icon={faAngleRight} size="2x" color="white"/></button>
-                                <input type="hidden" id="source" name="source" value="" />
-                            </form>
+                            {/*<form action="https://paginas.rocks/Pages/Index/343790" method="post" >*/}
+                            {/*    <input id="id" name="id" type="hidden" value="343790" />*/}
+                            {/*    <input id="pid" name="pid" type="hidden" value="13011807" />*/}
+                            {/*    <input id="list_id" name="list_id" type="hidden" value="343790" />*/}
+                            {/*    <input id="provider" name="provider" type="hidden" value="leadlovers" />*/}
+                            {/*    <input class="newsletter-input" id="email" name="email" placeholder="Informe o seu email" type="text" />*/}
+                            {/*    <button class="newsletter-button"  type="submit"><FontAwesomeIcon icon={faAngleRight} size="2x" color="white"/></button>*/}
+                            {/*    <input type="hidden" id="source" name="source" value="" />*/}
+                            {/*</form>*/}
+
+                        <form action="https://paginas.rocks/Pages/Index/343790" method="post">
+                            <input id="id" name="id" type="hidden" value="343790"/>
+                            <input id="pid" name="pid" type="hidden" value="13011807"/>
+                            <input id="list_id" name="list_id" type="hidden" value="343790"/>
+                            <input id="provider" name="provider" type="hidden" value="leadlovers"/>
+                            <input class="newsletter-input-2" id="name" name="name" placeholder="Informe o seu nome" type="text"/>
+
+                            <Grid item className="form-row" lg={12} xs={12}>
+                                <input className="newsletter-input" id="email" name="email"
+                                       placeholder="Informe o seu email" type="text"/>
+                                <button className="newsletter-button" type="submit"><FontAwesomeIcon icon={faAngleRight} size="2x" color="white"/></button>
+                                <input type="hidden" id="source" name="source" value=""/>
+                            </Grid>
+
+
+                        </form>
 
                     </Grid>
                 </Grid>

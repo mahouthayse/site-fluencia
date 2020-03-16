@@ -32,7 +32,7 @@ export default class Home extends Component{
                     <Info/>
                     <Programs/>
                     <Instagram/>
-                    {/*<Newsletter/>*/}
+                    <Newsletter/>
 
                </Grid>
                 <Footer/>
