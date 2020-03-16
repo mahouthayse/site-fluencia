@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Grid, Hidden} from '@material-ui/core';
 import "./style.scss";
 import Mail from "../../../Assets/Home/mail.png";
-import Flue from "../../../Assets/Home/flue.png";
+import Flue from "../../../Assets/Home/imgWork.png";
 import {Link} from "react-router-dom";
 
 
@@ -31,14 +31,15 @@ export default class Info extends Component{
 
                         <Grid item className="info-text-wrapper" xs={12} lg={6} md={8}>
                             <span className="info-title"> Curso de percepção de fertilidade</span>
-                            <span className="info-text"> Com aulas teóricas e conteúdos práticos, nosso curso de percepção de
-                            fertilidade é o primeiro e mais completo material do Brasil sobre este método maravilhoso.</span>
+                            <span className="info-text"> Com aulas teóricas e conteúdos práticos, nosso curso de
+                                percepção de fertilidade é o primeiro e mais completo material do Brasil sobre este
+                                método maravilhoso. Compilamos tudo com o maior carinho para que você possa aprender
+                                no seu próprio tempo.</span>
 
-                            <span className="info-text"> Temos uma versão 100% online para quem gosta de aprender no seu
-                            próprio tempo. Também oferecemos atendimentos em grupo e individuais para quem desejar se
-                            aprofundar ainda mais!</span>
+                            <span className="info-text"> O curso é ideal para quem gosta de aprender sozinha no seu
+                                próprio tempo e está começando a se interessar pelo tema.</span>
 
-                            <Link to="/" className="info-link" >Conheça agora</Link>
+                            {/*<Link to="/curso-online" className="info-link" >Conheça agora</Link>*/}
 
                         </Grid>
 
@@ -47,12 +48,13 @@ export default class Info extends Component{
                     <Hidden only={['sm', 'xs']}>
                     <Grid item className="info-text-wrapper" xs={12} lg={6} md={8}>
                         <span className="info-title"> Curso de percepção de fertilidade</span>
-                        <span className="info-text"> Com aulas teóricas e conteúdos práticos, nosso curso de percepção de
-                            fertilidade é o primeiro e mais completo material do Brasil sobre este método maravilhoso.</span>
+                        <span className="info-text"> Com aulas teóricas e conteúdos práticos, nosso curso de
+                                percepção de fertilidade é o primeiro e mais completo material do Brasil sobre este
+                                método maravilhoso. Compilamos tudo com o maior carinho para que você possa aprender
+                                no seu próprio tempo.</span>
 
-                        <span className="info-text"> Temos uma versão 100% online para quem gosta de aprender no seu
-                            próprio tempo. Também oferecemos atendimentos em grupo e individuais para quem desejar se
-                            aprofundar ainda mais!</span>
+                        <span className="info-text"> O curso é ideal para quem gosta de aprender sozinha no seu
+                                próprio tempo e está começando a se interessar pelo tema.</span>
 
                         <Link to="/" className="info-link" >Conheça agora</Link>
 

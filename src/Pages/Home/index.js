@@ -9,6 +9,7 @@ import Presentation from "../../Components/Home/Presentation";
 import Header from "../../Components/Home/Header";
 import SimpleMenu from "../../Components/Menu";
 import Instagram from "../../Components/Home/Instagram";
+import Programs from "../../Components/Home/Programs";
 
 
 
@@ -29,8 +30,9 @@ export default class Home extends Component{
                     <Presentation/>
                     <Benefits/>
                     <Info/>
+                    <Programs/>
                     <Instagram/>
-                    <Newsletter/>
+                    {/*<Newsletter/>*/}
 
                </Grid>
                 <Footer/>
