@@ -38,7 +38,7 @@ export default class Footer extends Component{
                         <Link to="/atendimento-individual" className="footer-text"> Atendimento Individual</Link>
                         {/*<span className="footer-text"> Blog</span>*/}
                         {/*<span className="footer-text"> Cursos</span>*/}
-                        <Link to="https://aluna.fluenciacorporal.com" className="footer-text"> Área da Aluna</Link>
+                        <a href="https://aluna.fluenciacorporal.com" className="footer-text"> Área da Aluna</a>
                     </Grid>
 
                     <Grid item className="footer-column" xs={12} md={3} lg={3}>

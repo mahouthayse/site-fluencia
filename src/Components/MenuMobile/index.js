@@ -60,7 +60,7 @@ export default function MenuMobile() {
                 {/*</ListItem>*/}
 
                 <ListItem>
-                    <ListItemText><Link to="https://aluna.fluenciacorporal.com" className="menu-link-primario" >Área da aluna</Link></ListItemText>
+                    <ListItemText><a href"https://aluna.fluenciacorporal.com" className="menu-link-primario" >Área da aluna</a></ListItemText>
                 </ListItem>
 
             </List>
