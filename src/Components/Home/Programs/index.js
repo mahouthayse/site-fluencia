@@ -31,7 +31,7 @@ export default class Programs extends Component{
                                     discutir todas as suas dúvidas e, assim, garantir o uso perfeito
                                     do método. E você ainda recebe uma série de materiais de apoio para seus estudos!</span>
 
-                                {/*<Link to="/curso-online" className="info-link" >Conheça agora</Link>*/}
+                                <Link to="/atendimento-individual" className="info-link" >Conheça agora</Link>
 
                             </Grid>
 
@@ -47,7 +47,7 @@ export default class Programs extends Component{
                                     discutir todas as suas dúvidas e, assim, garantir o uso perfeito
                                     do método. E você ainda recebe uma série de materiais de apoio para seus estudos!</span>
 
-                                {/*<Link to="/" className="info-link" >Conheça agora</Link>*/}
+                                <Link to="/atendimento-individual" className="info-link" >Conheça agora</Link>
 
                             </Grid>
 
@@ -77,7 +77,7 @@ export default class Programs extends Component{
                                     caminho. Aqui você vai aprender a fazer uso perfeito do método em um espaço seguro
                                     e acolhedor.</span>
 
-                                {/*<Link to="/curso-online" className="info-link" >Conheça agora</Link>*/}
+                                <Link to="/" className="info-link" >Em breve</Link>
 
                             </Grid>
 
@@ -92,7 +92,7 @@ export default class Programs extends Component{
                                     caminho. Aqui você vai aprender a fazer uso perfeito do método em um espaço seguro
                                     e acolhedor.</span>
 
-                                {/*<Link to="/" className="info-link" >Conheça agora</Link>*/}
+                                <Link to="/" className="info-link" >Em breve</Link>
 
                             </Grid>
 
