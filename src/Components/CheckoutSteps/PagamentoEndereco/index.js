@@ -14,6 +14,9 @@ import {
 } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import "./style.scss";
+import SelectSearch from 'react-select-search'
+
+
 
 export default function PagamentoEndereco(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
@@ -55,11 +58,6 @@ export default function PagamentoEndereco(nextStep){
 
                 </Grid>
 
-                <Grid container className="checkout-row" xs={12} md={12} spacing={1}>
-                    <Grid container item className="checkout-label-column" xs={12} md={6}>
-                        <label htmlFor="checkoutPais" className="checkout-label" >País:</label>
-                        <input className="checkout-input-row" id="checkoutPais" type="text" placeholder="Inserir País" required value={checkout.country} onChange={e => dispatch({ type: 'setCountry', country: e.target.value})}/>
-                    </Grid>
                     <Grid container item className="checkout-label-column" xs={12} md={6}>
                         <label htmlFor="checkoutEstado" className="checkout-label" >Estado:</label>
 
@@ -92,9 +90,7 @@ export default function PagamentoEndereco(nextStep){
                             <MenuItem value={"se"}>Sergipe</MenuItem>
                             <MenuItem value={"to"}>Tocantins</MenuItem>
                         </TextField>
-
                     </Grid>
-                </Grid>
                 <label htmlFor="checkoutCidade" className="checkout-label" >Cidade:</label>
                 <input className="checkout-input" id="checkoutCidade" type="text" placeholder="Inserir Cidade" required value={checkout.city} onChange={e => dispatch({ type: 'setCity', city: e.target.value})}/>
 

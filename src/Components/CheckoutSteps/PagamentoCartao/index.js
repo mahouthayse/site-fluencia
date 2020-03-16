@@ -49,14 +49,14 @@ export default function PagamentoCartao(nextStep){
             dateOfBirth = dateOfBirth.format('YYYY-MM-DD');
             var phoneNumberFormat = '+55' + phoneNumber;
             const transaction = await client.transactions.create({
-                "amount": 100,
+                "amount": 149900,
                 "card_hash": cardHash,
                 "installments" : installments,
                 "customer": {
                   "external_id": "#3311",
                   "name": name,
                   "type": documentType,
-                  "country": country,
+                  "country": 'br',
                   "email": email,
                   "documents": [
                     {
@@ -70,7 +70,7 @@ export default function PagamentoCartao(nextStep){
                 "billing": {
                   "name": name,
                   "address": {
-                    "country": country,
+                    "country": 'br',
                     "state": stateAd,
                     "city": city,
                     "street": street,
@@ -82,7 +82,7 @@ export default function PagamentoCartao(nextStep){
                   {
                     "id": "1",
                     "title": "Atendimento Individual",
-                    "unit_price": 100,
+                    "unit_price": 149900,
                     "quantity": 1,
                     "tangible": false
                   }
