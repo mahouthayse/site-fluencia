@@ -19,7 +19,7 @@ var moment = require('moment');
 
 export default function PagamentoCartao(nextStep){
     const {checkout} = useSelector( state => (state.checkout));
-    const {installments, name, documentType, email, zipcode, documentNumber, birthday, phoneNumber, street, streetNumber, country,stateAd, city, cardHolderName, cardNumber, cardCvv, cardExpirationDate, paymentStatus} = checkout;
+    const {installments, name, documentType, email, zipcode, documentNumber, birthday, phoneNumber, street, streetNumber,stateAd, city, cardHolderName, cardNumber, cardCvv, cardExpirationDate, paymentStatus} = checkout;
     const dispatch = useDispatch();
 
     async function next(event){
@@ -169,7 +169,7 @@ export default function PagamentoCartao(nextStep){
                     </Grid>
 
                     <Grid container item className="checkout-label-column" xs={12} lg={6}>
-                        <label htmlFor="checkoutDate" className="checkout-label" >Data de validade:</label>
+                        <label htmlFor="checkoutDate" className="checkout-label" >Data de validade (apenas números):</label>
                         <input className="checkout-input-row" id="checkoutDate" type="text" placeholder="00/00" required value={cardExpirationDate} onChange={e => dispatch({ type: 'setCardExpirationDate', cardExpirationDate: e.target.value})}/>
                     </Grid>
                 </Grid>
