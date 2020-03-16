@@ -1,9 +1,8 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './style.scss';
 import {Button, Grid, Box, FormControlLabel, FormControl,  InputLabel, Input} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
-const axios = require('axios');
-
+import api from '../../../services/api';
 
 
 export default function Cadastro(nextStep){
@@ -11,9 +10,12 @@ export default function Cadastro(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
     const {email, password, name, login} = checkout;
     const dispatch = useDispatch();
-
+    const [err, setErr] = useState(false);
+    useEffect(() => {
+        setTimeout(setErr(false), 5000)
+    }, [])
     async function handleSubmit(event){
-        axios.post('http://api-fluenciacorporal-com.umbler.net/users', {
+        api.post('/users', {
             name: name,
             email: email,
             password: password
@@ -30,18 +32,19 @@ export default function Cadastro(nextStep){
     }
 
     async function handleSubmitLogin(event){
-        axios.post('http://api-fluenciacorporal-com.umbler.net/users/login', {
+        api.post('/users/login', {
             email: email,
             password: password
         })
             .then(function (response) {
-                console.log(response);
+                setErr(false);
+                // console.log(response)
             }).then( () => {
             event.preventDefault();
             nextStep.nextStep();
         })
             .catch(function (error) {
-                console.log(error);
+                setErr(true);
             });
     }
 
@@ -58,7 +61,7 @@ export default function Cadastro(nextStep){
             <Grid container className="cadastro-wrapper" direction="column" justify="flex-start" alignItems="space-around" lg={12} spacing={1}>
                 <Box className="form-content">
                     <FormControl component="fieldset" style={{width: '100%'}} >
-
+                        
                         <label htmlFor="checkoutNome" className="checkout-label" >Nome completo:</label>
                         <input  className="checkout-input" id="checkoutNome" type="text" placeholder="Inserir nome e sobrenome" required value={name} onChange={e => dispatch({ type: 'setName', name: e.target.value})}/>
 
@@ -96,6 +99,7 @@ export default function Cadastro(nextStep){
                 </Box>
 
                     <button className="button-primary" onClick={handleSubmitLogin}>Próximo</button>
+                    {(err) ? <span style={{color: '#d32f2f', textAlign: 'center', width: '100%', fontSize: '0.9rem', marginTop: 20}}>Usuário e/ou senha inválido(s)!</span> : ''}
             </Grid>
         )
     }
