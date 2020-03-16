@@ -52,7 +52,7 @@ export default function CheckoutSteps(){
                     <span className="success-text-primary">Acesse a área da aluna com seu email e senha cadastrados para ter
                     acesso às videoaulas e materiais complementares. Aproveite!</span>
 
-                    <Link to="/" className="success-link" >Área da aluna</Link>
+                    <Link to="https://aluna.fluenciacorporal.com" className="success-link" >Área da aluna</Link>
 
                 </Grid>
 
