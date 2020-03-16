@@ -59,9 +59,9 @@ export default function MenuMobile() {
                 {/*    <ListItemText><Link to="/" className="menu-link-primario" >Contato</Link></ListItemText>*/}
                 {/*</ListItem>*/}
 
-                {/*<ListItem>*/}
-                {/*    <ListItemText><Link to="/" className="menu-link-primario" >Área da aluna</Link></ListItemText>*/}
-                {/*</ListItem>*/}
+                <ListItem>
+                    <ListItemText><Link to="https://aluna.fluenciacorporal.com" className="menu-link-primario" >Área da aluna</Link></ListItemText>
+                </ListItem>
 
             </List>
 

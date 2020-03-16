@@ -5,6 +5,7 @@ import Certificado1 from "../../Assets/Footer/certificado1.png";
 import Certificado2 from "../../Assets/Footer/certificado2.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faInstagram} from "@fortawesome/free-brands-svg-icons";
+import {Link} from 'react-router-dom';
 
 
 
@@ -33,11 +34,11 @@ export default class Footer extends Component{
                     </Grid>
 
                     <Grid item className="footer-column" xs={12} md={3} lg={3}>
-                        <span className="footer-text"> Home</span>
-                        <span className="footer-text"> Sobre</span>
-                        <span className="footer-text"> Blog</span>
-                        <span className="footer-text"> Cursos</span>
-                        <span className="footer-text"> Área da Aluna</span>
+                        <Link to="/" className="footer-text"> Home</Link>
+                        <Link to="/atendimento-individual" className="footer-text"> Atendimento Individual</Link>
+                        {/*<span className="footer-text"> Blog</span>*/}
+                        {/*<span className="footer-text"> Cursos</span>*/}
+                        <Link to="https://aluna.fluenciacorporal.com" className="footer-text"> Área da Aluna</Link>
                     </Grid>
 
                     <Grid item className="footer-column" xs={12} md={3} lg={3}>
