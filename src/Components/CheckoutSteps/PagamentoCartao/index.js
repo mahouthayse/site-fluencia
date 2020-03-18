@@ -35,7 +35,7 @@ export default function PagamentoCartao(nextStep){
         cardNumber,
         cardCvv,
         cardExpirationDate,
-        paymentStatus, 
+        paymentStatus,
         productPrice,
         productTitle} = checkout;
     const dispatch = useDispatch();
@@ -190,7 +190,7 @@ export default function PagamentoCartao(nextStep){
                     </Grid>
 
                     <Grid container item className="checkout-label-column" xs={12} lg={6}>
-                        <label htmlFor="checkoutDate" className="checkout-label" >Data de validade (apenas números):</label>
+                        <label htmlFor="checkoutDate" className="checkout-label" >Validade (apenas números):</label>
                         <input className="checkout-input-row" id="checkoutDate" type="text" placeholder="00/00" required value={cardExpirationDate} onChange={e => dispatch({ type: 'setCardExpirationDate', cardExpirationDate: e.target.value})}/>
                     </Grid>
                 </Grid>

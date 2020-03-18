@@ -23,7 +23,7 @@ export default function ValueCursoIndividual(){
 
 
     async function handleCheckout(){
-        api.get('/products/5e7230c477d9af0041584ab0', {
+        api.get('/products/5e723cbb77d9af0041584ab1', {
         })
             .then( response => {
                 console.log(response);
