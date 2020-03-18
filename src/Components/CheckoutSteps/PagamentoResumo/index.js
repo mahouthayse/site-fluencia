@@ -16,14 +16,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import "./style.scss";
 
 
-const dados = {
-    title: "Atendimento individual",
-    price: 1499
-}
-
 export default function PagamentoResumo(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
-    const {paymentMethod, coupon} = checkout;
+    const {paymentMethod, coupon, productTitle, productPrice} = checkout;
     const dispatch = useDispatch();
 
     async function next(event){
@@ -41,8 +36,8 @@ export default function PagamentoResumo(nextStep){
             <span className="checkout-title"> Resumo da compra</span>
 
             <Grid item className="form-resumo" xs={12} lg={12}>
-                <span className="resumo-text"><b>{dados.title} </b></span>
-            <span className="resumo-text"> R${dados.price}</span>
+                <span className="resumo-text"><b>{productTitle} </b></span>
+            <span className="resumo-text"> R${productPrice}</span>
             </Grid>
 
 

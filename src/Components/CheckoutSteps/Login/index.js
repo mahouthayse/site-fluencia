@@ -8,7 +8,7 @@ const axios = require('axios');
 export default function Login(nextStep){
 
     const { checkout } = useSelector( state => (state.checkout));
-    const {email, password, name} = checkout
+    const {email, password, name} = checkout;
     const dispatch = useDispatch();
 
     async function handleSubmit(event){

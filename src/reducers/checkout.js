@@ -7,6 +7,9 @@ const INITIAL_STATE = {
         created: new Date(),
         step: 1,
         login: false,
+        productTitle: '',
+        productPrice: '',
+
     },
     message: '',
 };
@@ -41,6 +44,16 @@ export default function checkout(state = INITIAL_STATE, action){
                 ...state,
                 checkout: {...state.checkout, password: action.password},
             }
+
+
+        case "setProduct":
+            return {
+                ...state,
+                checkout: {...state.checkout, productTitle: action.payload.productTitle, productPrice: action.payload.productPrice},
+            }
+
+
+
 
         case "setPaymentMethod":
             return {

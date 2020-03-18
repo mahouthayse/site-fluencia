@@ -31,7 +31,7 @@ export default function SimpleMenu() {
                         <Link to="/" className="menu-link" >Home</Link>
                         {/*<Link to="/" className="menu-link" >Sobre</Link>*/}
                         {/*<Link to="/" className="menu-link" >Blog</Link>*/}
-                        {/*<Link to="/curso" className="menu-link" >Curso</Link>*/}
+                        <Link to="/curso" className="menu-link" >Curso</Link>
                         <Link to="/atendimento-individual" className="menu-link" >Atendimento Individual</Link>
 
                         {/*<div>*/}

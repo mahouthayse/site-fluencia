@@ -47,9 +47,9 @@ export default function MenuMobile() {
                 {/*    <ListItemText><Link to="/" className="menu-link-primario" >Sobre</Link></ListItemText>*/}
                 {/*</ListItem>*/}
 
-                {/*<ListItem>*/}
-                {/*    <ListItemText><Link to="/" className="menu-link-primario" >Blog</Link></ListItemText>*/}
-                {/*</ListItem>*/}
+                <ListItem>
+                    <ListItemText><Link to="/curso" className="menu-link-primario" >Curso</Link></ListItemText>
+                </ListItem>
 
                 <ListItem>
                     <ListItemText><Link to="/atendimento-individual" className="menu-link-primario" >Atendimento Individual</Link></ListItemText>

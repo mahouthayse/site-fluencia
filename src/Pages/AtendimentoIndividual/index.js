@@ -11,6 +11,7 @@ import {faAngleDown, faPlus} from "@fortawesome/free-solid-svg-icons";
 import FeaturesIndividual from "../../Components/AtendimentoIndividual/FeaturesAtendimento";
 import Depoimentos from "../../Components/AtendimentoIndividual/Depoimento";
 import {Link} from 'react-router-dom'
+import ValueCursoIndividual from "../../Components/AtendimentoIndividual/ValueCursoIndividual";
 
 const produto = {
     title: "Atendimento individual",
@@ -134,40 +135,8 @@ export default class AtendimentoIndividual extends Component{
 
                 <Depoimentos/>
                 <FeaturesIndividual/>
+            <ValueCursoIndividual/>
 
-
-                {/*/!*PREÇO DO ATENDIMENTO*!/*/}
-
-
-                    <Grid container className="value-curso-wrapper" xs={12} lg={12} md={12}>
-
-
-                        <Grid container className="value-curso-card" xs={12} md={5}>
-
-
-                            <Grid item className="value-curso-card-header" xs={12} md={12}>
-
-                                <h2 className="value-card-title"> {produto.title}</h2>
-                                <h1 className="value-card-price"> R$ {produto.price}</h1>
-                                <span className="value-card-secondary-text"> No cartão de crédito ou boleto</span>
-                            </Grid>
-
-                            <Grid item className="value-curso-card-body" xs={12} md={12}>
-                                <Divider/>
-                                <span className="value-card-text">Material de percepção de fertilidade mais completo do Brasil</span>
-                                <Divider/>
-                                <span className="value-card-text"> Instrutora certificada</span>
-                                <Divider/>
-                                <span className="value-card-text"> 5 sessões de atendimento individual</span>
-                                <Divider/>
-
-                                <Link to="/checkout" className="value-card-link" >Comprar</Link>
-
-                                <span className="value-card-secondary-text" style={{fontSize: '1rem', marginTop: '16px'}}> Vagas limitadas</span>
-                            </Grid>
-                        </Grid>
-
-                    </Grid>
 
                 <Grid container className="contato-atendimento" xs={12} md={12}>
 
@@ -210,7 +179,7 @@ export default class AtendimentoIndividual extends Component{
                                     <span className="programs-card-title"> Curso Online</span>
                                     <span className="programs-card-text">Para quem tem interesse no método e quer um
                                         empurrãozinho para começar a estudar</span>
-                                    <button className="card-button">Quero conhecer</button>
+                                    <Link to="/curso" className="card-button">Quero conhecer</Link>
                                 </Grid>
 
 

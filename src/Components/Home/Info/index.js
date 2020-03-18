@@ -39,7 +39,7 @@ export default class Info extends Component{
                             <span className="info-text"> O curso é ideal para quem gosta de aprender sozinha no seu
                                 próprio tempo e está começando a se interessar pelo tema.</span>
 
-                            <Link to="/" className="info-link" >Em breve</Link>
+                            <Link to="/curso" className="info-link" >Conheça agora</Link>
 
                         </Grid>
 
@@ -56,7 +56,7 @@ export default class Info extends Component{
                         <span className="info-text"> O curso é ideal para quem gosta de aprender sozinha no seu
                                 próprio tempo e está começando a se interessar pelo tema.</span>
 
-                        <Link to="/" className="info-link" >Em breve</Link>
+                        <Link to="/curso" className="info-link" >Conheça agora</Link>
 
                     </Grid>
 

@@ -1,15 +1,46 @@
 import React, { Component } from "react";
 import {Grid,Divider} from '@material-ui/core';
 import "./style.scss";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import Group43 from "../../../Assets/Curso/group43.svg";
+import axios from 'axios';
+import {useDispatch, useSelector} from "react-redux";
+import checkout from "../../../reducers/checkout";
+import checkoutActions from "../../../actions/checkout";
+import Checkout from "../../../Pages/Checkout";
+import api from "../../../services/api";
+import { useHistory } from 'react-router-dom';
 
 
 
 
-export default class ValueCurso extends Component{
+export default function ValueCurso(){
+    const history = useHistory();
+    const {checkout} = useSelector( state => (state.checkout));
+    const {productTitle, productPrice} = checkout;
+    const dispatch = useDispatch();
+    console.log(productTitle, productPrice);
 
-    render(){
+
+
+    async function handleCheckout(){
+        api.get('/products/5e7230c477d9af0041584ab0', {
+        })
+            .then( response => {
+                console.log(response);
+                var title = response.data.title;
+                var price = response.data.price;
+                // console.log(title, price);
+                dispatch(checkoutActions.setProduct(title, price));
+ }).then(
+            history.push('/checkout')
+        )
+            .catch(function (error) {
+                console.log(error)
+            });
+
+
+    }
 
         return(
             <Grid container className="value-curso-wrapper" xs={12} lg={12} md={12}>
@@ -37,11 +68,10 @@ export default class ValueCurso extends Component{
                         <span className="value-card-text"> Lives para tirar dúvidas (em grupo)</span>
                         <Divider/>
 
-                        <Link to="/" className="value-card-link" >Comprar</Link>
+                        <button className="value-card-link" onClick={handleCheckout}>Comprar</button>
                     </Grid>
                 </Grid>
 
             </Grid>
         );
     }
-}

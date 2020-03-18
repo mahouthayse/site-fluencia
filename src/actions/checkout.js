@@ -34,6 +34,19 @@ const actions = {
         };
     },
 
+    setProduct: function(productTitle, productPrice) {
+        return {
+            type: "setProduct",
+            payload: {
+                productTitle,
+                productPrice
+            }
+
+        };
+    },
+
+
+
     setStreet: function(street) {
         return {
             type: "setStreet",
@@ -166,9 +179,6 @@ const actions = {
             paymentBarcode
         };
     },
-
-
-
 
 };
 
