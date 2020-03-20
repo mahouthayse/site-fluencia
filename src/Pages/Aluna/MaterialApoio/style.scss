@@ -1,0 +1,93 @@
+@import "../../../variables.scss";
+
+.material-apoio{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  padding:50px;
+  @media all and (max-width: 480px) {padding:16px;}
+}
+
+.titulo-primario{
+  @include primary-title;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { font-size: 1.438rem;}
+  @media all and (max-width: 480px) {font-size: 1.25rem; }
+}
+
+
+.texto-primario{
+  @include primary-text;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { font-size: 1.125rem;}
+  @media all and (max-width: 480px) {font-size: 1rem; }
+}
+
+.button-apoio-title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 2.813rem;
+  line-height: 3.625rem;
+  text-align: left;
+  color: #FFFFFF;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { font-size: 2.25rem; line-height: 2.5rem;}
+  @media all and (max-width: 480px) {font-size: 1.5rem; line-height: 2rem;}
+}
+
+.button-apoio-subtitle{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  color: #FFFFFF;
+  margin-top: -16px;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { line-height: 1.5rem;}
+  @media all and (max-width: 480px) {font-size: 1rem; }
+}
+
+.MuiDivider-vertical{
+  width: 3px;
+  background-color: #fff!important;
+  height: 80px!important;
+  margin-left: 5px;
+  margin-right:5px;
+}
+
+.button-container{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom:10px;
+}
+
+.header-apoio{
+  width: 100%;
+}
+
+
+
+.base-button{
+  background: linear-gradient(111.82deg, #471E67 19.99%, #693A77 51.94%, #9B628E 105.21%);
+  box-shadow: 0px 3.31492px 3.31492px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin:10px;
+  min-width: 40%;
+  height: 160px;
+  @media all and (max-width: 480px) {height: 120px; padding: 10px;}
+}
+
+.base-button-texto{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left:32px;
+  @media all and (max-width: 480px) {padding-left:20px;}
+}
+
+.fa-arrow-alt-circle-down{
+  color: #fff;
+}

@@ -1,0 +1,29 @@
+.lista-aulas{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+
+.videoaula-resumo{
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid #471E67;
+  padding: 16px;
+}
+
+.pl-5 {
+  padding-left: 5% !important;
+}
+
+.description-video p{
+  font-size: 0.9rem;
+  color: gray
+}
+// .description-video strong{
+//   color: #4a4a4a;
+//   font-weight: 500 !important;
+// }
+
+.btnCursor:hover {
+  cursor: pointer;
+}

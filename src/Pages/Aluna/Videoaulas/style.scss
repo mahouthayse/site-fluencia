@@ -1,0 +1,97 @@
+@import "../../../variables.scss";
+
+.videoaulas{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.videoaulas .texto-primario {
+  font-size: 0.8rem !important;
+  font-weight: 500;
+  color: #404040;
+  line-height: 1.5rem !important
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.videoaula-conteudo-video-side {
+  height: 100%
+}
+.videoaula-resumo {
+  // height: 80%;
+  margin: 40px 0 !important;
+  overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap
+}
+
+.texto-resumo {
+  font-size: 0.8rem;
+  // margin-bottom: 5px
+}
+.base-dashboard {
+  background: #FFF !important;
+}
+
+strong.titulo-resumo {
+  color: #471E67;
+  font-size: 1rem;
+  // margin-bottom: 10px;
+}
+a.texto-resumo {
+  margin: 0 !important;
+  color: #ce474d;
+  text-decoration: underline !important;
+}
+.list {
+  list-style-type: none;
+  font-weight: normal;
+  margin: 0;
+  padding: 6%;
+  line-height: normal;
+}
+
+.pl-5 {
+  padding-left: 5% !important;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: rgba(242, 201, 137, 9) !important;
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: rgba(242, 201, 137, 9) !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem
+}
+
+.btnControl {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #ce474d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoaula-conteudo-topo p{ margin: 0}
+.videoaula-conteudo-topo .btn-subtitle-aula {
+  font-size: 0.8rem;
+  color: gray
+}
+.videoaula-conteudo-topo .btn-title-aula {
+  color: #4a4a4a;
+  font-weight: 500;
+}
+// .videoaula-resumo{ padding: 4% !important}
+.d-flex {
+  display: flex;
+}
+
+.video-container div {
+  width: 100% !important;
+  height: 100% !important
+}

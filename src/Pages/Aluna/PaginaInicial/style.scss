@@ -1,0 +1,62 @@
+@import "../../../variables.scss";
+
+.pagina-inicial{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  padding:50px;
+}
+
+.titulo-primario{
+  @include primary-title;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { font-size: 1.438rem;}
+}
+
+.MuiDivider-root{
+  width: 100%;
+  background-color: #471E67!important;
+  height: 2px!important;
+  margin-top: -10px!important;
+  margin-bottom:25px!important;}
+
+ul{
+  list-style-type: decimal;
+  @include primary-text;
+  font-weight: 500;
+}
+
+.texto-primario{
+  @include primary-text;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { font-size: 1.125rem;}
+}
+
+.texto-secundario{
+  @include primary-text;
+  color: #fff!important;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { font-size: 1.125rem;}
+}
+
+.fa-info-circle{
+  color: #fff;
+}
+
+.header-inicial{
+  width:100%;
+}
+
+.pagina-inicial-row{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.pagina-inicial-row-color{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding:32px;
+  background: linear-gradient(129.79deg, #CA4B49 19.99%, #D9615D 75.91%, #EA7973 105.21%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom:50px;
+}

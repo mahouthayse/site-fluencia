@@ -1,0 +1,82 @@
+
+
+.minha-conta{
+  padding:50px;
+}
+
+.minha-conta-container{
+  display: flex;
+  flex-flow: row wrap;
+  height:100%;
+  justify-content: space-between;
+}
+
+.minha-conta-card{
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding:32px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  height:100%;
+}
+
+.minha-conta-text{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #404040;
+  margin-bottom:32px;
+}
+
+.minha-conta-label{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #471E67;
+}
+
+.minha-conta-input{
+  background: #FFFFFF;
+  border: 1px solid #471E67;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height:45px;
+  width:22vw;
+  margin-bottom:20px;
+  text-indent:1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #9E9E9E;
+}
+
+.minha-conta-column{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.form-footer{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.button-primary{
+  align-self:flex-end!important;
+  background-color: #471E67;
+  border-radius: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding:12px 40px 12px 40px;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: none;
+}
+
