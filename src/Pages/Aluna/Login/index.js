@@ -10,12 +10,23 @@ export default function Login({history}){
     const {email, password} = user;
     const dispatch = useDispatch();
     const [err, setErr] = useState(false);
+    const [roles, setRoles] = useState([]);
     useEffect(() => {
         localStorage.clear();
-        setTimeout(setErr(false), 5000)
+        setTimeout(() => setErr(false), 5000);
+
+        // pegando roles
+        async function getRoles(){
+            const response = await api.get('/roles');
+            await setRoles(response.data);
+        }
+
+        getRoles();
     }, [])
 
     async function handleSubmitLogin(event){
+        let perfis = [];
+        let top = [];
         api.post('/users/login', {
             email: email,
             password: password
@@ -23,29 +34,31 @@ export default function Login({history}){
             .then(function (response) {
                 localStorage.setItem('authorization', response.data.token);
                 localStorage.setItem('id', response.data.id);
-                // console.log(response.data)
-                // id = response.data.id;
+                response.data.roles.map(index => perfis.push(index.roleId));
+                perfis.map(index => {
+                    roles.map(rolesIndex => {
+                        if(index == rolesIndex.id) top.push(rolesIndex.name)
+                    })
+                });
+                localStorage.setItem('roles', top);
             })
             .then( () => {
                 api.get('/user-roles/count', {userId: localStorage.getItem('id')})
                 .then(function(response){
                     if(response.data.count > 0){
                         history.push('/home')
+                    } else {
+                        setErr('Ainda não identificamos seu pagamento. Não é possivel efetuar o login!');
                     }
                 })
                 .catch(function (error) {
                     setErr('Ainda não identificamos seu pagamento. Não é possivel efetuar o login!');
                 }); 
                
-        })
+            })
             .catch(function (error) {
                 setErr('Usuário e/ou senha inválido(s)!');
             });
-
-        // if(localStorage.getItem('id')){
-        //     const response = await api.get(`/roles/${localStorage.getItem('id')}`);
-        //     console.log(response.data)
-        // }
     }
 
     return(
