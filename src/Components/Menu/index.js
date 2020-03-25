@@ -33,6 +33,7 @@ export default function SimpleMenu() {
                         {/*<Link to="/" className="menu-link" >Blog</Link>*/}
                         <Link to="/curso" className="menu-link" >Curso</Link>
                         <Link to="/atendimento-individual" className="menu-link" >Atendimento Individual</Link>
+                        <Link to="/atendimento-em-grupo" className="menu-link" >Atendimento em Grupo</Link>
 
                         {/*<div>*/}
                         {/*    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>*/}

@@ -5,6 +5,7 @@ import Footer from "../../Components/Footer";
 import SimpleMenu from "../../Components/Menu";
 import HeaderGrupo from "../../Assets/Curso/headerGroup.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { useHistory } from 'react-router-dom';
 import {
     faAngleDown,
     faAngleRight,
@@ -19,12 +20,64 @@ import Depoimentos from "../../Components/AtendimentoIndividual/Depoimento";
 import {Link} from "react-router-dom";
 import {faCalendar} from "@fortawesome/free-regular-svg-icons";
 import {faClock} from "@fortawesome/free-regular-svg-icons/faClock";
+import {useDispatch, useSelector} from "react-redux";
+import api from "../../services/api";
+import checkoutActions from "../../actions/checkout";
 
 
 
-export default class AtendimentoEmGrupo extends Component{
+export default function AtendimentoEmGrupo(){
 
-    render(){
+
+    const history = useHistory();
+    const {checkout} = useSelector( state => (state.checkout));
+    const {productTitle, productPrice} = checkout;
+    const dispatch = useDispatch();
+    console.log(productTitle, productPrice);
+
+
+
+    async function handleCheckout18(){
+        api.get('/products/5e7b7b760408e800b1235a30', {
+        })
+            .then( response => {
+                console.log(response);
+                var title = response.data.title;
+                var price = response.data.price;
+                // console.log(title, price);
+                dispatch(checkoutActions.setProduct(title, price));
+            }).then(
+            history.push('/checkout')
+        )
+            .catch(function (error) {
+                console.log(error)
+            });
+
+
+    }
+
+    async function handleCheckout21(){
+        api.get('/products/5e7b7bf70408e800b1235a31', {
+        })
+            .then( response => {
+                console.log(response);
+                var title = response.data.title;
+                var price = response.data.price;
+                // console.log(title, price);
+                dispatch(checkoutActions.setProduct(title, price));
+            }).then(
+            history.push('/checkout')
+        )
+            .catch(function (error) {
+                console.log(error)
+            });
+
+
+    }
+
+
+
+
 
         return(
             <Grid container className="atendimento-individual-container" xs={12} lg={12} md={12}>
@@ -266,8 +319,8 @@ export default class AtendimentoEmGrupo extends Component{
 
                         <Grid container className="atendimento-cartao-container" xs={12} md={5}>
                             <Grid item className="atendimento-cartao-cabecalho" xs={12} md={12}>
-                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faCalendarDay} size="1x" color="#471E67"/> de XX/03 a XX/04</span>
-                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faClock} size="1x" color="#471E67"/> Segunda-feira, das 18h às 20h </span>
+                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faCalendarDay} size="1x" color="#471E67"/> de 13/04 a 01/06</span>
+                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faClock} size="1x" color="#471E67"/> Segunda-feira, às 18h </span>
                             </Grid>
 
                             <Grid item className="atendimento-cartao-conteudo" xs={12} md={12}>
@@ -281,7 +334,7 @@ export default class AtendimentoEmGrupo extends Component{
                                 <Divider/>
                                 <span className="cartao-conteudo-texto"> 6 sessões de atendimento em grupo</span>
                                 <Divider/>
-                                <Link to="/" className="cartao-conteudo-link" >Quero me inscrever</Link>
+                                <button className="value-card-link" onClick={handleCheckout18}>Comprar</button>
                                 <span className="cartao-conteudo-subtitulo-secundario"> Vagas limitadas</span>
                             </Grid>
 
@@ -289,22 +342,22 @@ export default class AtendimentoEmGrupo extends Component{
 
                         <Grid container className="atendimento-cartao-container" xs={12} md={5}>
                             <Grid item className="atendimento-cartao-cabecalho" xs={12} md={12}>
-                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faCalendarDay} size="1x" color="#471E67"/> de XX/03 a XX/04</span>
-                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faClock} size="1x" color="#471E67"/> Segunda-feira, das 20h30 às 22h30  </span>
+                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faCalendarDay} size="1x" color="#471E67"/> de 13/04 a 01/06</span>
+                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faClock} size="1x" color="#471E67"/> Segunda-feira, às 21h  </span>
                             </Grid>
 
                             <Grid item className="atendimento-cartao-conteudo" xs={12} md={12}>
                                 <span className="cartao-conteudo-titulo"> Atendimento em grupo</span>
                                 <span className="cartao-conteudo-preco"> R$999</span>
                                 <span className="cartao-conteudo-subtitulo"> no cartão de crédito ou boleto</span>
-                                <Divider/>
+                                <Divider className="divisor-atendimento"/>
                                 <span className="cartao-conteudo-texto"> Material de percepção de fertilidade mais completo do Brasil</span>
                                 <Divider/>
                                 <span className="cartao-conteudo-texto"> Instrutora certificada</span>
                                 <Divider/>
                                 <span className="cartao-conteudo-texto"> 6 sessões de atendimento em grupo</span>
                                 <Divider/>
-                                <Link to="/" className="cartao-conteudo-link" >Quero me inscrever</Link>
+                                <button className="value-card-link" onClick={handleCheckout21}>Comprar</button>
                                 <span className="cartao-conteudo-subtitulo-secundario"> Vagas limitadas</span>
                             </Grid>
 
@@ -555,5 +608,4 @@ export default class AtendimentoEmGrupo extends Component{
                 <Footer/>
             </Grid>
         );
-    }
 }
