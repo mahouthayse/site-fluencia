@@ -14,6 +14,8 @@ import {
 } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import "./style.scss";
+import api from "../../../services/api";
+import checkoutActions from "../../../actions/checkout";
 
 
 export default function PagamentoResumo(nextStep){
@@ -28,6 +30,25 @@ export default function PagamentoResumo(nextStep){
     async function back(event){
         event.preventDefault();
         nextStep.previousStep();
+    }
+
+    async function handleCoupon(){
+        switch(coupon){
+            case 'fluefriends':
+                return(
+                    api.get('/coupons/5e7bb8620408e800b1235a33').then(response => {
+                        var porcentagem = response.data.percentage;
+                        let finalPrice = productPrice - ((productPrice * porcentagem)/100);
+                         console.log(finalPrice);
+
+            })
+                )
+
+            default:
+                return ( console.log("O cupom não é válido"))
+
+        }
+
     }
 
     return(
@@ -50,7 +71,8 @@ export default function PagamentoResumo(nextStep){
 
             <Grid container item className="checkout-label-column" xs={12} lg={12}>
                 <label htmlFor="checkoutCupom" className="checkout-label" >Cupom de desconto:</label>
-                <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir cupom" value={coupon} onChange={e => dispatch({ type: 'setCoupon', zipcode: e.target.value})}/>
+                <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir cupom" value={coupon} onChange={e => dispatch({ type: 'setCoupon', coupon: e.target.value})}/>
+                <button className="button-secondary" onClick={handleCoupon}>Adicionar cupom</button>
             </Grid>
 
             <Grid item className="form-footer" xs={12} lg={12}>
