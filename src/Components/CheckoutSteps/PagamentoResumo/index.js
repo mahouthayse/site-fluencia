@@ -50,7 +50,7 @@ export default function PagamentoResumo(nextStep){
 
             <Grid container item className="checkout-label-column" xs={12} lg={12}>
                 <label htmlFor="checkoutCupom" className="checkout-label" >Cupom de desconto:</label>
-                <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir cupom" value={coupon} onChange={e => dispatch({ type: 'setZipcode', zipcode: e.target.value})}/>
+                <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir cupom" value={coupon} onChange={e => dispatch({ type: 'setCoupon', zipcode: e.target.value})}/>
             </Grid>
 
             <Grid item className="form-footer" xs={12} lg={12}>

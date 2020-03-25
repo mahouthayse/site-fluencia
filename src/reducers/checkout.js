@@ -53,8 +53,6 @@ export default function checkout(state = INITIAL_STATE, action){
             }
 
 
-
-
         case "setPaymentMethod":
             return {
                 ...state,
