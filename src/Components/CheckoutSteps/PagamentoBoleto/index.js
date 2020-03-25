@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 export default function PagamentoBoleto(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
-    const {documentType, documentNumber, name, country, productPrice} = checkout;
+    const {documentType, documentNumber, name, country,finalPrice, productPrice} = checkout;
     const dispatch = useDispatch();
 
 
@@ -41,7 +41,7 @@ export default function PagamentoBoleto(nextStep){
 
     const handlePay =  () => {
         try {
-            var productPriceFormat = productPrice * 100;
+            var productPriceFormat = finalPrice * 100;
 
             pagarme.client.connect({api_key: 'ak_live_fefjhmfcIaZqOmhcextCcZMsfFTOXN'})
                 .then(client => client.transactions.create({

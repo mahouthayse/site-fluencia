@@ -33,6 +33,7 @@ export default function PagamentoCartao(nextStep){
         city,
         cardHolderName,
         cardNumber,
+        finalPrice,
         cardCvv,
         cardExpirationDate,
         paymentStatus,
@@ -67,7 +68,7 @@ export default function PagamentoCartao(nextStep){
             dateOfBirth = dateOfBirth.format('YYYY-MM-DD');
             var phoneNumberFormat = '+55' + phoneNumber;
 
-            var productPriceFormat = productPrice * 100;
+            var productPriceFormat = finalPrice * 100;
 
             const transaction = await client.transactions.create({
                 "amount": productPriceFormat,
@@ -102,7 +103,7 @@ export default function PagamentoCartao(nextStep){
                 "items": [
                   {
                     "id": "1",
-                    "title": "Atendimento Individual",
+                    "title": productTitle,
                     "unit_price": productPriceFormat,
                     "quantity": 1,
                     "tangible": false

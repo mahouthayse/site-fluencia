@@ -97,6 +97,12 @@ export default function checkout(state = INITIAL_STATE, action){
                 checkout: {...state.checkout, coupon: action.coupon},
             }
 
+        case "setFinalPrice":
+            return {
+                ...state,
+                checkout: {...state.checkout, finalPrice: action.finalPrice},
+            }
+
 
         case "setCountry":
             return {

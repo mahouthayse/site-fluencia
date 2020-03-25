@@ -16,11 +16,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import "./style.scss";
 import api from "../../../services/api";
 import checkoutActions from "../../../actions/checkout";
+import Alert from '@material-ui/lab/Alert';
 
 
 export default function PagamentoResumo(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
-    const {paymentMethod, coupon, productTitle, productPrice} = checkout;
+    const {paymentMethod, coupon, productTitle, productPrice, finalPrice} = checkout;
     const dispatch = useDispatch();
 
     async function next(event){
@@ -33,21 +34,36 @@ export default function PagamentoResumo(nextStep){
     }
 
     async function handleCoupon(){
-        switch(coupon){
-            case 'fluefriends':
-                return(
-                    api.get('/coupons/5e7bb8620408e800b1235a33').then(response => {
-                        var porcentagem = response.data.percentage;
-                        let finalPrice = productPrice - ((productPrice * porcentagem)/100);
-                         console.log(finalPrice);
+        if(coupon){
+            switch(coupon){
+                case 'fluefriends':
+                    return(
+                        api.get('/coupons/5e7bb8620408e800b1235a33').then(response => {
+                            var porcentagem = response.data.percentage;
+                            let finalPreco = productPrice - ((productPrice * porcentagem)/100);
+                            console.log(finalPreco);
+                            dispatch({type: 'setFinalPrice', finalPrice: finalPreco});
 
-            })
-                )
+                        }).then( ()=>{
+                            alert("O cupom foi adicionado!");
+                            }
 
-            default:
-                return ( console.log("O cupom não é válido"))
+                        )
+                    )
+
+                default:
+                    return ( alert("O cupom não é válido"))
+
+            }
 
         }
+        else{
+            let finalPreco = productPrice;
+            dispatch({type: 'setFinalPrice', finalPrice: finalPreco});
+        }
+
+
+
 
     }
 
@@ -73,7 +89,9 @@ export default function PagamentoResumo(nextStep){
                 <label htmlFor="checkoutCupom" className="checkout-label" >Cupom de desconto:</label>
                 <input className="checkout-input-row" id="checkoutCEP" type="text" placeholder="Inserir cupom" value={coupon} onChange={e => dispatch({ type: 'setCoupon', coupon: e.target.value})}/>
                 <button className="button-secondary" onClick={handleCoupon}>Adicionar cupom</button>
+
             </Grid>
+
 
             <Grid item className="form-footer" xs={12} lg={12}>
                 <button className="button-secondary" onClick={back}>Voltar</button>

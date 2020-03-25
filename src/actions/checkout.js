@@ -96,6 +96,13 @@ const actions = {
         };
     },
 
+    setFinalPrice: function(finalPrice) {
+        return {
+            type: "setFinalPrice",
+            finalPrice
+        };
+    },
+
     setCardHolderName: function(cardHolderName) {
         return {
             type: "setCardHolderName",
