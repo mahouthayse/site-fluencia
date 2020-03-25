@@ -38,7 +38,7 @@ const Routes = () => (
                 <Route path="/entrar" exact component={Login}/>
                 <Route path="/resetar-senha" exact component={PaginaInicial}/>
                 <PrivateRoute path="/home" exact component={baseDashboard(PaginaInicial)}/>
-                <PrivateRoute path="/materiais-de-apoio" component={baseDashboard(PaginaInicial)}/>
+                <PrivateRoute path="/materiais-de-apoio" component={baseDashboard(MaterialApoio)}/>
                 <PrivateRoute path="/videoaulas" component={baseDashboard(Videoaulas)}/>
                 <PrivateRoute path="/minha-conta" component={baseDashboard(PaginaInicial)}/>
 

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const api = axios.create({ baseURL: "http://localhost:3000"});
-// const api = axios.create({ baseURL: "https://api-fluenciacorporal-com.umbler.net"});
+// const api = axios.create({ baseURL: "http://localhost:3000"});
+const api = axios.create({ baseURL: "http://api.fluenciacorporal.com"});
 
 export default api;

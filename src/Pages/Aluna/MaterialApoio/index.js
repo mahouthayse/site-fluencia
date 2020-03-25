@@ -3,6 +3,12 @@ import {Grid, Divider} from "@material-ui/core";
 import "./style.scss"
 import download from "../../../Assets/Aluna/images/download.svg";
 import materialApoio from "../../../Assets/Aluna/images/materialApoio.png";
+import Apostila from "../../../Assets/Aluna/materialApoio/apostila.pdf";
+import GuiaRapido from "../../../Assets/Aluna/materialApoio/guia_rápido.pdf";
+import Grafico from "../../../Assets/Aluna/materialApoio/grafico_baixas.pdf";
+import GraficoAltas from "../../../Assets/Aluna/materialApoio/grafico_altas.pdf";
+import PadroesReferencia from "../../../Assets/Aluna/materialApoio/parâmetros_referência.pdf";
+import Autoavaliacao from "../../../Assets/Aluna/materialApoio/auto_avaliação.pdf";
 
 export default class MaterialApoio extends Component{
     render(){
@@ -29,7 +35,9 @@ export default class MaterialApoio extends Component{
                         </Grid>
 
                         <Grid item className="base-button-texto" xs={10} lg={10}>
-                            <h1 className="button-apoio-title">EBOOK</h1>
+
+                            <a href={Apostila} className="button-apoio-title" target="_blank">EBOOK</a>
+
                         </Grid>
 
                     </Grid>
@@ -56,7 +64,7 @@ export default class MaterialApoio extends Component{
                     </Grid>
 
                     <Grid item className="base-button-texto" xs={10} lg={10}>
-                        <h1 className="button-apoio-title">GUIA RÁPIDO</h1>
+                        <a href={GuiaRapido} className="button-apoio-title" target="_blank">GUIA RÁPIDO</a>
                     </Grid>
 
                 </Grid>
@@ -69,8 +77,8 @@ export default class MaterialApoio extends Component{
 
                     </Grid>
                     <Grid item className="base-button-texto" xs={10} lg={10}>
-                        <h1 className="button-apoio-title">GRÁFICO</h1>
-                        <h2 className="button-apoio-subtitle">PADRÃO</h2>
+                        <a href={GraficoAltas} className="button-apoio-title" target="_blank">GRÁFICO</a>
+                        <h2 className="button-apoio-subtitle">TEMPERATURAS ALTAS</h2>
                     </Grid>
 
                 </Grid>
@@ -88,7 +96,7 @@ export default class MaterialApoio extends Component{
                         </Grid>
 
                         <Grid item className="base-button-texto" xs={10} lg={10}>
-                            <h1 className="button-apoio-title">GRÁFICO</h1>
+                            <a href={Grafico} className="button-apoio-title" target="_blank">GRÁFICO</a>
                             <h2 className="button-apoio-subtitle">TEMPERATURAS BAIXAS</h2>
                         </Grid>
 
@@ -119,7 +127,7 @@ export default class MaterialApoio extends Component{
                             <img className="button-icon" src={download}/>
                         </Grid>
                         <Grid item className="base-button-texto" xs={10} lg={10}>
-                            <h1 className="button-apoio-title">AUTOAVALIAÇÃO</h1>
+                            <a href={Autoavaliacao} className="button-apoio-title" target="_blank">AUTOAVALIAÇÃO</a>
                         </Grid>
 
                     </Grid>
@@ -132,7 +140,7 @@ export default class MaterialApoio extends Component{
                         </Grid>
                         <Grid item className="base-button-texto" xs={10} lg={10}>
 
-                            <h1 className="button-apoio-title">PARÂMETROS DE REFERÊNCIA</h1>
+                            <a href={PadroesReferencia} className="button-apoio-title" target="_blank">PARÃMETROS DE REFERÊNCIA</a>
                         </Grid>
 
                     </Grid>
