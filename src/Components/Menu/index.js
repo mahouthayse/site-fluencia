@@ -55,7 +55,7 @@ export default function SimpleMenu() {
                     </Grid>
 
                     <Grid item className="menu-button-wrapper" sm={12} lg={5} md={3}>
-                        <a href="https://aluna.fluenciacorporal.com" className="menu-button"> Área da aluna</a>
+                        <a href="/entrar" className="menu-button"> Área da aluna</a>
                     </Grid>
                 </Grid>
             </Hidden>
