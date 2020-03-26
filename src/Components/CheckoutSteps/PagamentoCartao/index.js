@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {useState, useEffect} from "react";
 import pagarme from 'pagarme';
 import {
     Box,
@@ -14,12 +14,18 @@ import {
     Select
 } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
+import api from "../../../services/api";
 
 var moment = require('moment');
 
 export default function PagamentoCartao(nextStep){
+    const [pagStatus, setPagStatus] = useState(false);
+    const [roles, setRoles] = useState([]);
+    const [err, setErr] = useState(false);
     const {checkout} = useSelector( state => (state.checkout));
-    const {installments,
+    const {
+        user,
+        installments,
         name,
         documentType,
         email,
@@ -38,8 +44,20 @@ export default function PagamentoCartao(nextStep){
         cardExpirationDate,
         paymentStatus,
         productPrice,
-        productTitle} = checkout;
+        productTitle
+    } = checkout;
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        setTimeout(setErr(false), 5000)
+        // pegando roles
+        async function getRoles(){
+            const response = await api.get('/roles');
+            await setRoles(response.data);
+        }
+
+        getRoles();
+    }, [])
 
     async function next(event){
         event.preventDefault();
@@ -112,16 +130,60 @@ export default function PagamentoCartao(nextStep){
             }).then(response => {
                 var status = response.status;
                 dispatch({type: 'setPaymentStatus', paymentStatus: status});
-                console.log(status);
             }).then( () =>{
-                nextStep.nextStep();
-            });
+                setPagStatus(true);
+            })
 
         } catch (e) {
             console.error(e);
         }
+
+        if(pagStatus){
+            let res = roles.filter(index => {
+                return index.name == getProductDb(productTitle)
+            });
+            const producId = res[0].id;
+            console.log('pagu')
+            console.log(producId)
+            api.post('/user-roles', {
+                userId: producId,
+                roleId: localStorage.getItem('id')
+            })
+                .then(function (response) {
+                    setErr(false);
+                    // console.log(response)
+                }).then( () => {
+                    // event.preventDefault();
+                    nextStep.nextStep();
+                })
+                .catch(function (error) {
+                    setErr(true);
+                });
+        }
     }
 
+    function getProductDb(product){
+        switch (product) {
+            case 'Curso de percepção de fertilidade':
+                return 'alunaWorkshop'
+                break;
+        
+            case 'Atendimento Individual':
+                return 'alunaIndividual'
+                break;
+        
+            case 'Atendimento em grupo 18h':
+                return 'alunaGrupo'
+                break;
+        
+            case 'Atendimento em grupo 21h':
+                return 'alunaGrupo'
+                break;
+            default:
+                return ''
+                break;
+        }
+    }
     const renderDocumentInput = () => {
         const isIndividual = documentType === 'individual';
 

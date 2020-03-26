@@ -10,39 +10,56 @@ export default function Cadastro(nextStep){
     const { checkout } = useSelector( state => (state.checkout));
     const {email, password, name, login} = checkout;
     const dispatch = useDispatch();
+    const [roles, setRoles] = useState([]);
     const [err, setErr] = useState(false);
     useEffect(() => {
+        localStorage.clear();
         setTimeout(setErr(false), 5000)
+        // pegando roles
+        async function getRoles(){
+            const response = await api.get('/roles');
+            await setRoles(response.data);
+        }
+
+        getRoles();
     }, [])
     async function handleSubmit(event){
         api.post('/users', {
             name: name,
             email: email,
-            password: password
+            password: password,
+            role: [""]
         })
             .then(function (response) {
-                console.log(response);
-            }).then( () => {
-            event.preventDefault();
-            nextStep.nextStep();
-        })
+                // event.preventDefault();
+                nextStep.nextStep();
+            })
             .catch(function (error) {
                 console.log(error);
             });
     }
 
     async function handleSubmitLogin(event){
+        let perfis = [];
+        let top = [];
         api.post('/users/login', {
             email: email,
             password: password
         })
             .then(function (response) {
                 setErr(false);
-                // console.log(response)
+                localStorage.setItem('authorization', response.data.token);
+                localStorage.setItem('id', response.data.id);
+                perfis.map(index => {
+                    roles.map(rolesIndex => {
+                        if(index == rolesIndex.id) top.push(rolesIndex.name)
+                    })
+                });
+                localStorage.setItem('roles', top);
             }).then( () => {
-            event.preventDefault();
-            nextStep.nextStep();
-        })
+                // event.preventDefault();
+                nextStep.nextStep();
+            })
             .catch(function (error) {
                 setErr(true);
             });
