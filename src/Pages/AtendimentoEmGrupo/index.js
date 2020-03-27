@@ -317,28 +317,28 @@ export default function AtendimentoEmGrupo(){
 
                         <Grid container className="atendimento-valor-wrapper" xs={12} md={10}>
 
-                        <Grid container className="atendimento-cartao-container" xs={12} md={5}>
-                            <Grid item className="atendimento-cartao-cabecalho" xs={12} md={12}>
-                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faCalendarDay} size="1x" color="#471E67"/> de 13/04 a 01/06</span>
-                                <span className="cartao-titulo"> <FontAwesomeIcon icon={faClock} size="1x" color="#471E67"/> Segunda-feira, às 18h </span>
-                            </Grid>
+                    {/*    <Grid container className="atendimento-cartao-container" xs={12} md={5}>*/}
+                    {/*        <Grid item className="atendimento-cartao-cabecalho" xs={12} md={12}>*/}
+                    {/*            <span className="cartao-titulo"> <FontAwesomeIcon icon={faCalendarDay} size="1x" color="#471E67"/> de 13/04 a 01/06</span>*/}
+                    {/*            <span className="cartao-titulo"> <FontAwesomeIcon icon={faClock} size="1x" color="#471E67"/> Segunda-feira, às 18h </span>*/}
+                    {/*        </Grid>*/}
 
-                            <Grid item className="atendimento-cartao-conteudo" xs={12} md={12}>
-                                <span className="cartao-conteudo-titulo"> Atendimento em grupo</span>
-                                <span className="cartao-conteudo-preco"> R$999</span>
-                                <span className="cartao-conteudo-subtitulo"> no cartão de crédito ou boleto</span>
-                                <Divider/>
-                                <span className="cartao-conteudo-texto"> Material de percepção de fertilidade mais completo do Brasil</span>
-                                 <Divider/>
-                                <span className="cartao-conteudo-texto"> Instrutora certificada</span>
-                                <Divider/>
-                                <span className="cartao-conteudo-texto"> 6 sessões de atendimento em grupo</span>
-                                <Divider/>
-                                <button className="value-card-link" onClick={handleCheckout18}>Comprar</button>
-                                <span className="cartao-conteudo-subtitulo-secundario"> Vagas limitadas</span>
-                            </Grid>
+                    {/*        <Grid item className="atendimento-cartao-conteudo" xs={12} md={12}>*/}
+                    {/*            <span className="cartao-conteudo-titulo"> Atendimento em grupo</span>*/}
+                    {/*            <span className="cartao-conteudo-preco"> R$999</span>*/}
+                    {/*            <span className="cartao-conteudo-subtitulo"> no cartão de crédito ou boleto</span>*/}
+                    {/*            <Divider/>*/}
+                    {/*            <span className="cartao-conteudo-texto"> Material de percepção de fertilidade mais completo do Brasil</span>*/}
+                    {/*             <Divider/>*/}
+                    {/*            <span className="cartao-conteudo-texto"> Instrutora certificada</span>*/}
+                    {/*            <Divider/>*/}
+                    {/*            <span className="cartao-conteudo-texto"> 6 sessões de atendimento em grupo</span>*/}
+                    {/*            <Divider/>*/}
+                    {/*            <button className="value-card-link" onClick={handleCheckout18}>Comprar</button>*/}
+                    {/*            <span className="cartao-conteudo-subtitulo-secundario"> Vagas limitadas</span>*/}
+                    {/*        </Grid>*/}
 
-                        </Grid>
+                    {/*    </Grid>*/}
 
                         <Grid container className="atendimento-cartao-container" xs={12} md={5}>
                             <Grid item className="atendimento-cartao-cabecalho" xs={12} md={12}>
